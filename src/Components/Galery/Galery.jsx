@@ -11,14 +11,16 @@ import GaleryItem from "./GaleryItem";
 
 export const Galery = () => {
   const [showImage, setShowImage] = useState(false);
-  const [photoId, setPhotoId] = useState("");
+  const [photoSrc, setPhotoSrc] = useState("");
+  const [photoId, setPhotoId] = useState();
 
   const handleClick = (e) => {
     setShowImage(!showImage);
-    setPhotoId(e.target.src);
+    setPhotoSrc(e.target.src);
+    setPhotoId(e.target.id);
   };
 
-  console.log(photoId);
+  console.log(photoId, "id en Galery");
 
   return (
     <>
@@ -30,6 +32,8 @@ export const Galery = () => {
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
               <img
+                id={item.id}
+                className="multyImage"
                 onClick={handleClick}
                 src={`${item.img}`}
                 srcSet={`${item.img}`}
@@ -52,7 +56,13 @@ export const Galery = () => {
           ))}
         </ImageList>
       ) : (
-        <GaleryItem photoId={photoId} />
+        <GaleryItem
+          photoSrc={photoSrc}
+          setPhotoSrc={setPhotoSrc}
+          setShowImage={setShowImage}
+          setPhotoId={setPhotoId}
+          photoId={photoId}
+        />
       )}
     </>
   );
@@ -62,73 +72,85 @@ const itemData = [
   {
     // img: "https://as01.epimg.net/meristation/imagenes/2021/09/17/noticias/1631884307_984778_1631884400_noticia_normal.jpg",
     img: "https://drive.google.com/uc?export=view&id=1wC088M-SK8iIlKduTQN2uYcjEqEVkeds",
-    title: "Breakfast",
-    author: "@bkristastucchio",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
     rows: 2,
     cols: 2,
     featured: true,
+    id: 1,
   },
   {
     img: "https://drive.google.com/uc?export=view&id=1RdI2cXkIBV3LKcxr-9dm2xZ0N-m7SdCx",
-    title: "Burger",
-    author: "@rollelflex_graphy726",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
+    id: 2,
   },
   {
     img: "https://drive.google.com/uc?export=view&id=1BNe4BAYCeX79E9Ce8SneYnY02bXht-Sx",
-    title: "Camera",
-    author: "@helloimnik",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
+    id: 3,
   },
   {
     img: "https://drive.google.com/uc?export=view&id=1FeoL690Ad6X9kNFEOPJtKXb-aISU3zMV",
-    title: "Coffee",
-    author: "@nolanissac",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
     cols: 2,
+    id: 4,
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
-    author: "@hjrc33",
+    img: "https://drive.google.com/uc?export=view&id=106Kbnz4lHV3MDtklYbcPYE_zsC4z38hM",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
     cols: 2,
+    id: 5,
   },
   {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-    author: "@arwinneil",
+    img: "https://drive.google.com/uc?export=view&id=1ksjtipSGA_0TgaWPGsa6bSfPzBblZqOa",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
     rows: 2,
     cols: 2,
     featured: true,
+    id: 6,
   },
   {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
-    author: "@tjdragotta",
+    img: "https://drive.google.com/uc?export=view&id=1J9QRDzgtVzhoykGHHYJZj3wWuzHmWrcF",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
+    id: 7,
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-    author: "@katie_wasserman",
+    img: "https://drive.google.com/uc?export=view&id=1SBJyrNb2UYiyeZ5-g4UXuIzYZDNKq8Gr",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
+    id: 8,
   },
   {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    title: "Mushrooms",
-    author: "@silverdalex",
+    img: "https://drive.google.com/uc?export=view&id=1RusFJIHshN7APCRtDgUaZbRshXwZ_-32",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
     rows: 2,
     cols: 2,
+    id: 9,
   },
   {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-    title: "Tomato basil",
-    author: "@shelleypauls",
+    img: "https://drive.google.com/uc?export=view&id=1rt4j10VlrHe5putyaCYrpJJ2xcq3gYGU",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
+    id: 10,
   },
   {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-    author: "@peterlaster",
+    img: "https://drive.google.com/uc?export=view&id=1eeoKcoLwI2Wkp02iNNl7ynpbqpST0U1X",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
+    id: 11,
   },
   {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-    author: "@southside_customs",
+    img: "https://drive.google.com/uc?export=view&id=10pCtsTAe7aHKDfEfTGje4LGVqbl-Ujwg",
+    title: "Nombre de la foto",
+    author: "Alexis Fernández",
     cols: 2,
+    id: 12,
   },
 ];
