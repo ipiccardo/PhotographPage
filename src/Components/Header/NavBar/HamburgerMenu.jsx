@@ -85,8 +85,8 @@ const HamburgerMenu = ({ open, setOpen }) => {
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
+        <DrawerHeader sx={{ backgroundColor: "black", color: "white" }}>
+          <IconButton sx={{ color: "white" }} onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (

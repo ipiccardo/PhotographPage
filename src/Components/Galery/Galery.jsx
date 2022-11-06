@@ -28,36 +28,43 @@ export const Galery = () => {
   return (
     <>
       {!showImage ? (
-        <ImageList sx={{ width: 500, height: 450 }}>
-          <ImageListItem key="Subheader" cols={2}>
-            <ListSubheader component="div">3 Picos</ListSubheader>
-          </ImageListItem>
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                id={item.id}
-                className="multyImage"
-                onClick={handleClick}
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
-                alt={item.title}
-                loading="lazy"
-              />
-              <ImageListItemBar
-                title={item.title}
-                subtitle={item.author}
-                actionIcon={
-                  <IconButton
-                    sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                    aria-label={`info about ${item.title}`}
-                  >
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
+        <div className="galeryContainer">
+          <ImageList sx={{ width: "80%", height: "100%" }}>
+            <ImageListItem key="Subheader" cols={2}>
+              <ListSubheader
+                component="div"
+                sx={{ backgroundColor: "black", color: "white" }}
+              >
+                3 Picos
+              </ListSubheader>
             </ImageListItem>
-          ))}
-        </ImageList>
+            {itemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  id={item.id}
+                  className="multyImage"
+                  onClick={handleClick}
+                  src={`${item.img}`}
+                  srcSet={`${item.img}`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+                <ImageListItemBar
+                  title={item.title}
+                  subtitle={item.author}
+                  actionIcon={
+                    <IconButton
+                      sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                      aria-label={`info about ${item.title}`}
+                    >
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
       ) : (
         <GaleryItem
           photoSrc={photoSrc}
