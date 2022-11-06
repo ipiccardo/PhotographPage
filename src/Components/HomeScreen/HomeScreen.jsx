@@ -1,9 +1,10 @@
 import React from "react";
+import "./homeScreen.css";
 
 export const HomeScreen = () => {
   return (
     <>
-      <h1>HomeScreen</h1>
+      <div className="hero"></div>
     </>
   );
 };

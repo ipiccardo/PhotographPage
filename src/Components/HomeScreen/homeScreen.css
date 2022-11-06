@@ -1,0 +1,9 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+  /* background-image: url(https://drive.google.com/uc?export=view&id=1tQ0t54ylAwvfp2aawIAbgNzyPn6qAPtS); */
+  background-image: url(https://drive.google.com/uc?export=view&id=1T8GVoCS7kD31oeheEv7MKf8EylPs5tUZ);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+}
