@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
@@ -14,13 +14,16 @@ export const Galery = () => {
   const [photoSrc, setPhotoSrc] = useState("");
   const [photoId, setPhotoId] = useState();
 
+  useEffect(() => {
+    const filteredImg = itemData.find((item) => item.id === photoId);
+    setPhotoSrc(filteredImg?.img);
+  }, [photoId]);
+
   const handleClick = (e) => {
     setShowImage(!showImage);
     setPhotoSrc(e.target.src);
     setPhotoId(e.target.id);
   };
-
-  console.log(photoId, "id en Galery");
 
   return (
     <>

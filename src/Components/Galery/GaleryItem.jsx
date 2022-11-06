@@ -2,40 +2,50 @@ import React from "react";
 import "./galery.css";
 import { IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CloseIcon from "@mui/icons-material/Close";
+import { useEffect } from "react";
 
-const GaleryItem = ({
-  photoSrc,
-  setPhotoSrc,
-  setShowImage,
-  setPhotoId,
-  photoId,
-}) => {
-  console.log(photoSrc, "en galeryItem");
-
-  console.log(photoId, "id en galeryItem");
-
+const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
   const handleClose = () => {
     setShowImage(false);
   };
 
   const nextPhoto = () => {
-    setPhotoId((photoId) => parseInt(photoId) + 1);
+    photoId !== 12
+      ? setPhotoId((photoId) => parseInt(photoId) + 1)
+      : setPhotoId(1);
   };
+
+  const PreviousPhoto = () => {
+    photoId !== 1
+      ? setPhotoId((photoId) => parseInt(photoId) - 1)
+      : setPhotoId(12);
+  };
+
+  useEffect(() => {
+    setPhotoId((photoId) => parseInt(photoId));
+  }, [setPhotoId]);
 
   return (
     <>
-      <div style={{ width: "100%", height: "100vh" }}>
+      <div style={{ position: "relative" }}>
+        <div className="imageContainer"></div>
         <img
-          style={{ position: "absolute", right: "12%" }}
           className="singleImage"
           width={"80%"}
           src={photoSrc}
           alt={"Prueba"}
           loading="lazy"
         />
-        <div style={{ position: "absolute", left: "83%" }}>
+        <div style={{ position: "absolute", left: "85%", top: 0 }}>
           <IconButton onClick={handleClose}>{<CloseIcon />}</IconButton>
+        </div>
+        <div style={{ position: "absolute", right: "85%", top: "50%" }}>
+          <IconButton onClick={PreviousPhoto}>{<ChevronLeftIcon />}</IconButton>
+        </div>
+        <div style={{ position: "absolute", left: "85%", top: "50%" }}>
+          <IconButton onClick={nextPhoto}>{<ChevronRightIcon />}</IconButton>
         </div>
       </div>
       <button onClick={nextPhoto}>Next</button>
