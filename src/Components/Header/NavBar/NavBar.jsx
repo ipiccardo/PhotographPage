@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import HamburgerMenu from "./HamburgerMenu";
-import "./navBar.css";
 
 const Header = () => {
   const [open, setOpen] = useState(false);

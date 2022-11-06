@@ -45,3 +45,22 @@ export const Galery = () => { */
   display: flex;
   justify-content: center;
 }
+
+.listContainer {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.listContainer li {
+  margin-right: 2px;
+  margin-top: 2px;
+}
+
+@media (max-width: 800px) {
+  .singleImage {
+    width: 100%;
+    height: 100vw;
+  }
+}

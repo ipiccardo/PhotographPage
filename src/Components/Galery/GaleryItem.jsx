@@ -39,16 +39,33 @@ const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
           loading="lazy"
         />
         <div style={{ position: "absolute", left: "85%", top: 0 }}>
-          <IconButton onClick={handleClose}>{<CloseIcon />}</IconButton>
+          <IconButton onClick={handleClose}>
+            {
+              <CloseIcon
+                sx={{ width: "30px", height: "30px", color: "white" }}
+              />
+            }
+          </IconButton>
         </div>
         <div style={{ position: "absolute", right: "85%", top: "50%" }}>
-          <IconButton onClick={PreviousPhoto}>{<ChevronLeftIcon />}</IconButton>
+          <IconButton onClick={PreviousPhoto}>
+            {
+              <ChevronLeftIcon
+                sx={{ width: "30px", height: "30px", color: "white" }}
+              />
+            }
+          </IconButton>
         </div>
         <div style={{ position: "absolute", left: "85%", top: "50%" }}>
-          <IconButton onClick={nextPhoto}>{<ChevronRightIcon />}</IconButton>
+          <IconButton onClick={nextPhoto}>
+            {
+              <ChevronRightIcon
+                sx={{ width: "30px", height: "30px", color: "white" }}
+              />
+            }
+          </IconButton>
         </div>
       </div>
-      <button onClick={nextPhoto}>Next</button>
     </>
   );
 };
