@@ -64,3 +64,9 @@ export const Galery = () => { */
     height: 100vw;
   }
 }
+
+@media (max-width: 1800px) {
+  .singleImage {
+    height: 600px;
+  }
+}
