@@ -1,6 +1,6 @@
 import React from "react";
 import "./homeScreen.css";
-import { Suspense, lazy } from "react";
+import { Suspense } from "react";
 
 export const HomeScreen = () => {
   return (
