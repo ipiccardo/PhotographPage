@@ -39,6 +39,7 @@ export const Galery = () => {
             setPhotoSrc={setPhotoSrc}
             photoId={photoId}
             setData={setData}
+            data={data}
           />
         );
       case "Proyecto Prueba":
@@ -56,9 +57,6 @@ export const Galery = () => {
         return;
     }
   };
-
-  const prueba = proyect();
-  console.log(prueba);
 
   return (
     <>
