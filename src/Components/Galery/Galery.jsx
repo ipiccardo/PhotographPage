@@ -1,10 +1,12 @@
 import * as React from "react";
+import { Suspense, lazy } from "react";
 import { useState, useEffect } from "react";
 import "./galery.css";
 import GaleryItem from "./GaleryItem";
-import TresPicos from "./Proyects/TresPicos";
+// import TresPicos from "./Proyects/TresPicos";
 import ProyectList from "./Proyects/ProyectList";
 import ProyectoPrueba from "./Proyects/ProyectoPrueba";
+const TresPicos = lazy(() => import("./Proyects/TresPicos"));
 
 export const Galery = () => {
   const [showImage, setShowImage] = useState(false);
@@ -32,15 +34,17 @@ export const Galery = () => {
     switch (proyectName) {
       case "tres picos":
         return (
-          <TresPicos
-            handleClick={handleClick}
-            showImage={showImage}
-            setShowImage={setShowImage}
-            setPhotoSrc={setPhotoSrc}
-            photoId={photoId}
-            setData={setData}
-            data={data}
-          />
+          <Suspense fallback={<h1>Cargando...</h1>}>
+            <TresPicos
+              handleClick={handleClick}
+              showImage={showImage}
+              setShowImage={setShowImage}
+              setPhotoSrc={setPhotoSrc}
+              photoId={photoId}
+              setData={setData}
+              data={data}
+            />
+          </Suspense>
         );
       case "Proyecto Prueba":
         return (

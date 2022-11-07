@@ -3,45 +3,40 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
-import { Skeleton } from "@mui/material";
 import "./galery.css";
 
-const TresPicos = ({ handleClick, setData, data }) => {
+const TresPicos = ({ handleClick, setData }) => {
   useEffect(() => {
     setData(itemData);
   }, [setData]);
 
   return (
     <>
-      {data.length > 11 ? (
-        <div className="galeryContainer">
-          <ImageList sx={{ width: "80%", height: "100%" }}>
-            <ImageListItem key="Subheader" cols={2}>
-              <ListSubheader
-                component="div"
-                sx={{ backgroundColor: "black", color: "white" }}
-              >
-                3 Picos
-              </ListSubheader>
+      <div className="galeryContainer">
+        <ImageList sx={{ width: "80%", height: "100%" }}>
+          <ImageListItem key="Subheader" cols={2}>
+            <ListSubheader
+              component="div"
+              sx={{ backgroundColor: "black", color: "white" }}
+            >
+              3 Picos
+            </ListSubheader>
+          </ImageListItem>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                id={item.id}
+                className="multyImage"
+                onClick={handleClick}
+                src={`${item.img}`}
+                srcSet={`${item.img}`}
+                alt={item.title}
+                loading="lazy"
+              />
             </ImageListItem>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  id={item.id}
-                  className="multyImage"
-                  onClick={handleClick}
-                  src={`${item.img}`}
-                  srcSet={`${item.img}`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      ) : (
-        <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
-      )}
+          ))}
+        </ImageList>
+      </div>
     </>
   );
 };
