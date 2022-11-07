@@ -2,11 +2,11 @@ import * as React from "react";
 import { Suspense, lazy } from "react";
 import { useState, useEffect } from "react";
 import "./galery.css";
-import GaleryItem from "./GaleryItem";
-// import TresPicos from "./Proyects/TresPicos";
-import ProyectList from "./Proyects/ProyectList";
-import ProyectoPrueba from "./Proyects/ProyectoPrueba";
+
 const TresPicos = lazy(() => import("./Proyects/TresPicos"));
+const ProyectList = lazy(() => import("./Proyects/ProyectList"));
+const ProyectoPrueba = lazy(() => import("./Proyects/ProyectoPrueba"));
+const GaleryItem = lazy(() => import("./GaleryItem"));
 
 export const Galery = () => {
   const [showImage, setShowImage] = useState(false);
@@ -48,14 +48,16 @@ export const Galery = () => {
         );
       case "Proyecto Prueba":
         return (
-          <ProyectoPrueba
-            handleClick={handleClick}
-            showImage={showImage}
-            setShowImage={setShowImage}
-            setPhotoSrc={setPhotoSrc}
-            photoId={photoId}
-            setData={setData}
-          />
+          <Suspense fallback={<h1>Cargando...</h1>}>
+            <ProyectoPrueba
+              handleClick={handleClick}
+              showImage={showImage}
+              setShowImage={setShowImage}
+              setPhotoSrc={setPhotoSrc}
+              photoId={photoId}
+              setData={setData}
+            />
+          </Suspense>
         );
       default:
         return;
@@ -66,20 +68,24 @@ export const Galery = () => {
     <>
       {!showImage ? (
         <div>
-          <ProyectList
-            handleProyectChange={handleProyectChange}
-            proyect={proyectName}
-          />
+          <Suspense fallback={<h1>Cargando...</h1>}>
+            <ProyectList
+              handleProyectChange={handleProyectChange}
+              proyect={proyectName}
+            />
+          </Suspense>
           {proyect(proyectName)}
         </div>
       ) : (
-        <GaleryItem
-          photoSrc={photoSrc}
-          setPhotoSrc={setPhotoSrc}
-          setShowImage={setShowImage}
-          setPhotoId={setPhotoId}
-          photoId={photoId}
-        />
+        <Suspense fallback={<h1>Cargando...</h1>}>
+          <GaleryItem
+            photoSrc={photoSrc}
+            setPhotoSrc={setPhotoSrc}
+            setShowImage={setShowImage}
+            setPhotoId={setPhotoId}
+            photoId={photoId}
+          />
+        </Suspense>
       )}
     </>
   );
