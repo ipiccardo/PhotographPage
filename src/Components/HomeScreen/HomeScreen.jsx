@@ -1,13 +1,10 @@
 import React from "react";
 import "./homeScreen.css";
-import { Suspense } from "react";
 
 export const HomeScreen = () => {
   return (
     <>
-      <Suspense fallback={<h1>...Cargando</h1>}>
-        <div className="hero"></div>
-      </Suspense>
+      <div className="hero"></div>
     </>
   );
 };
