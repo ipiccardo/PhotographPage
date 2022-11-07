@@ -1,10 +1,13 @@
 import React from "react";
 import "./homeScreen.css";
+import { Suspense, lazy } from "react";
 
 export const HomeScreen = () => {
   return (
     <>
-      <div className="hero"></div>
+      <Suspense fallback={<h1>...Cargando</h1>}>
+        <div className="hero"></div>
+      </Suspense>
     </>
   );
 };

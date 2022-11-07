@@ -68,12 +68,10 @@ export const Galery = () => {
     <>
       {!showImage ? (
         <div>
-          <Suspense fallback={<h1>Cargando...</h1>}>
-            <ProyectList
-              handleProyectChange={handleProyectChange}
-              proyect={proyectName}
-            />
-          </Suspense>
+          <ProyectList
+            handleProyectChange={handleProyectChange}
+            proyect={proyectName}
+          />
           {proyect(proyectName)}
         </div>
       ) : (

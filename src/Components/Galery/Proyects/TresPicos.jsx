@@ -3,7 +3,6 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
-import { Suspense } from "react";
 import "./galery.css";
 
 const TresPicos = ({ handleClick, setData }) => {
@@ -23,21 +22,19 @@ const TresPicos = ({ handleClick, setData }) => {
               3 Picos
             </ListSubheader>
           </ImageListItem>
-          <Suspense fallback={<h1>Cargando...</h1>}>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  id={item.id}
-                  className="multyImage"
-                  onClick={handleClick}
-                  src={`${item.img}`}
-                  srcSet={`${item.img}`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </Suspense>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                id={item.id}
+                className="multyImage"
+                onClick={handleClick}
+                src={`${item.img}`}
+                srcSet={`${item.img}`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
         </ImageList>
       </div>
     </>
