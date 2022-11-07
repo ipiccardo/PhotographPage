@@ -3,7 +3,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
-import "./galery.css";
+import "../galery.css";
 
 const ProyectoPrueba = ({ handleClick, setData }) => {
   useEffect(() => {
