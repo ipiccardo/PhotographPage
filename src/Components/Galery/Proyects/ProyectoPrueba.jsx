@@ -13,7 +13,7 @@ const ProyectoPrueba = ({ handleClick, setData }) => {
   return (
     <>
       <div className="galeryContainer">
-        <ImageList sx={{ width: "80%", height: "100%" }}>
+        <ImageList sx={{ width: "50%", height: "100%" }}>
           <ImageListItem key="Subheader" cols={2}>
             <ListSubheader
               component="div"
