@@ -6,6 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -50px;
+  position: absolute;
 }
 
 @media (max-width: 800px) {
@@ -16,5 +17,43 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -50px;
+  }
+}
+
+
+.title-box {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  background-color: black;
+  color: white;
+  left: 25%;
+  border-radius: 20px;
+  opacity: 0.7;
+  padding: 16px;
+}
+
+
+.title-box p {
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+
+  .title-box {
+    top: 20%
+  }
+
+  .title-box h1 {
+    font-size: 25px;
+  }
+
+
+  .title-box p {
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 500;
   }
 }
