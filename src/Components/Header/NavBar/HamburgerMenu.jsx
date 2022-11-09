@@ -104,14 +104,14 @@ const HamburgerMenu = ({ open, setOpen }) => {
             marginRight: "auto",
           }}
         >
-          <ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
             <NavLink to={"/HomeScreen"}>Home</NavLink>
           </ListItemButton>
-          <ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
             <NavLink to={"/Galery"}>Galeria</NavLink>
           </ListItemButton>
-          <ListItemButton>Titulo 3</ListItemButton>
-          <ListItemButton>Titulo 4</ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>Titulo 3</ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>Titulo 4</ListItemButton>
         </List>
         <Divider />
       </Drawer>
