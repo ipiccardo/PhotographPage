@@ -4,7 +4,6 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
-import { Spinner } from "../../Spinner/Spinner";
 
 const TresPicos = ({ handleClick, setData }) => {
   useEffect(() => {
