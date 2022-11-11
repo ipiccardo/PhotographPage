@@ -3,7 +3,7 @@ import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import HamburgerMenu from "./HamburgerMenu";
@@ -28,10 +28,10 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Portfolio
-            </Typography>
-            <span className="nav-item nav-link text-info">ALEXIS</span>
+            </Typography> */}
+            <span className="nav-item nav-link text-info">ALEXIS FERNÁNDEZ</span>
           </Toolbar>
         </AppBar>
         <HamburgerMenu open={open} setOpen={setOpen} />
