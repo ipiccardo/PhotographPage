@@ -1,16 +1,31 @@
 .social-media-container {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20vh;
+    flex-wrap: wrap;
 }
 
 a {
     color: black;
 }
 
+
+.social-media-container span {
+    font-size: 20px;
+}
+
 .social-media-container svg:hover {
     color: lightgray;
+}
+
+
+.social-media-div {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    flex-direction: column;
 }

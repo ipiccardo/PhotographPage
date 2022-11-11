@@ -9,29 +9,39 @@ export const Contacto = () => {
     <>
       <h1>CONTACTO</h1>
       <div className="social-media-container" style={{ fontSize: "4em" }}>
+        <div className="social-media-div">
+        <span>chinofernandezph</span>
         <a
-            rel="noreferrer"
-            href="https://instagram.com/chinofernandezph?igshid=YmMyMTA2M2Y="
-            target="_blank"
+          rel="noreferrer"
+          href="https://instagram.com/chinofernandezph?igshid=YmMyMTA2M2Y="
+          target="_blank"
           >
-        <FontAwesomeIcon icon={faInstagram} />
-          </a>
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
+          </div>
+          <div className="social-media-div">
+
+        <span>5491144181310</span>
         <a
           rel="noreferrer"
           href="https://wa.me/5491144181310"
           target="_blank"
           title="5491144181310"
-        >
+          >
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
+          </div>
+          <div className="social-media-div">
+        <span>alexisdariofernandez@gmail</span>
         <a
           rel="noreferrer"
-          href="https://mail@gmail.com"
+          href="https://alexisdariofernandez@gmail.com"
           target="_blank"
-          title="mail@gmail.com"
+          title="alexisdariofernandez@gmail.com"
         >
           <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
         </a>
+        </div>
       </div>
     </>
   );
