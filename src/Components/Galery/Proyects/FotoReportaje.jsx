@@ -2,10 +2,12 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../galery.css";
 
-export const FotoReportaje = ({ handleClick, setData, showImage, photoSrc, setPhotoSrc, setShowImage, setPhotoId, photoId }) => {
+
+export const FotoReportaje = ({ handleClick, setData }) => {
+
   useEffect(() => {
     setData(itemDataFour);
   }, [setData]);
@@ -22,19 +24,22 @@ export const FotoReportaje = ({ handleClick, setData, showImage, photoSrc, setPh
               Foto Reportaje
             </ListSubheader>
           </ImageListItem>
-          {itemDataFour.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                id={item.id}
-                className="multyImage"
-                onClick={handleClick}
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
+         { (
+           itemDataFour.map((item) => (
+             <ImageListItem key={item.img}>
+             <img
+             loading="lazy"
+             id={item.id}
+             className="multyImage"
+             onClick={handleClick}
+             src={`${item.img}`}
+             srcSet={`${item.img}`}
+             alt={item.title}
+             />
+             </ImageListItem>
+             ))
+             )
+           }
         </ImageList>
       </div>
     </>

@@ -31,13 +31,17 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
     <>
       <div style={{ position: "relative" }}>
         <div className="imageContainer"></div>
-        <img
-          className="singleImage"
-          width={"80%"}
-          src={photoSrc}
-          alt={"Prueba"}
-          loading="lazy"
-        />
+        <div
+          style={{
+            backgroundImage: `url(${photoSrc})`,
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            height: "90vh",
+            width: "100vw",
+            backgroundRepeat: "no-repeat",
+            marginTop: '-30px',
+          }}
+        ></div>
         <div style={{ position: "absolute", left: "85%", top: 0 }}>
           <IconButton onClick={handleClose}>
             {
