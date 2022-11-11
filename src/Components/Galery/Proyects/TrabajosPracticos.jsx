@@ -5,7 +5,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
 
-const TrabajosPracticos = ({ handleClick, setData }) => {
+export const TrabajosPracticos = ({ handleClick, setData }) => {
   useEffect(() => {
     setData(itemDataSix);
   }, [setData]);

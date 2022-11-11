@@ -6,7 +6,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect } from "react";
 
-const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
+export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
   const handleClose = () => {
     setShowImage(false);
   };

@@ -30,7 +30,7 @@ const ProyectList = ({ handleProyectChange }) => {
             Futsal
           </Button>
         </li>
-        <li>
+        {/* <li>
           <Button sx={{ backgroundColor: "black" }} variant="contained" name='FotoReportaje' onClick={handleProyectChange}>
             Foto Reportaje
           </Button>
@@ -44,7 +44,7 @@ const ProyectList = ({ handleProyectChange }) => {
           <Button sx={{ backgroundColor: "black" }} variant="contained" name='TrabajosPracticos' onClick={handleProyectChange}>
             Trabajos Prácticos
           </Button>
-          </li>
+          </li> */}
       </ul>
     </>
   );

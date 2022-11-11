@@ -5,7 +5,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
 
-const LibroDeArtista = ({ handleClick, setData }) => {
+export const LibroDeArtista = ({ handleClick, setData, data }) => {
   useEffect(() => {
     setData(itemDataFive);
   }, [setData]);
@@ -23,7 +23,7 @@ const LibroDeArtista = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {itemDataFive.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.id}>
               <img
                 id={item.id}
                 className="multyImage"

@@ -11,8 +11,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItemButton from "@mui/material/ListItemButton";
 import { NavLink } from "react-router-dom";
-// import InboxIcon from "@mui/icons-material/MoveToInbox";
-// import MailIcon from "@mui/icons-material/Mail";
 
 const drawerWidth = 240;
 
@@ -105,14 +103,26 @@ const HamburgerMenu = ({ open, setOpen }) => {
           }}
         >
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink to={"/HomeScreen"}>Home</NavLink>
+            <NavLink style={{textDecoration: 'none'}} to={"/HomeScreen"}>Home</NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink to={"/Galery"}>Galeria</NavLink>
-          </ListItemButton>
-          <ListItemButton onClick={handleDrawerClose}>
-          <NavLink to={"/Biography"}>Biografía</NavLink>
+          <NavLink style={{textDecoration: 'none'}} to={"/Biography"}>Biografía</NavLink>
             </ListItemButton>
+            <ListItemButton onClick={handleDrawerClose}>
+            <NavLink style={{textDecoration: 'none'}} to={"/FotoReportaje"}>Fotorreportaje</NavLink>
+          </ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
+            <NavLink style={{textDecoration: 'none'}} to={"/TrabajosPracticos"}>Trabajos Prácticos</NavLink>
+          </ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
+            <NavLink style={{textDecoration: 'none'}} to={"/LibrodeArtista"}>Libro de Artista</NavLink>
+          </ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
+            <NavLink style={{textDecoration: 'none'}} to={"/Galery"}>Archivo</NavLink>
+          </ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
+            <NavLink style={{textDecoration: 'none'}} to={"/Contacto"}>Contacto</NavLink>
+          </ListItemButton>
         </List>
         <Divider />
       </Drawer>

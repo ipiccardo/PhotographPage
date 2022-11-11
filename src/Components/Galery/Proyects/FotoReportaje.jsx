@@ -5,7 +5,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
 
-const FotoReportaje = ({ handleClick, setData }) => {
+export const FotoReportaje = ({ handleClick, setData, showImage, photoSrc, setPhotoSrc, setShowImage, setPhotoId, photoId }) => {
   useEffect(() => {
     setData(itemDataFour);
   }, [setData]);
