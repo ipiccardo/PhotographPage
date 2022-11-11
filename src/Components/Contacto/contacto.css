@@ -1,0 +1,16 @@
+.social-media-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+}
+
+a {
+    color: black;
+}
+
+.social-media-container svg:hover {
+    color: lightgray;
+}
