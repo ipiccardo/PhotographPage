@@ -20,26 +20,31 @@ const ProyectList = ({ handleProyectChange }) => {
             onClick={handleProyectChange}
             sx={{ backgroundColor: "black" }}
             variant="contained"
-            name="Proyecto Prueba"
+            name="Maradona"
           >
-            Proyecto 2
+            Maradona
           </Button>
         </li>
         <li>
-          <Button sx={{ backgroundColor: "black" }} variant="contained">
-            Proyecto 3
+          <Button sx={{ backgroundColor: "black" }} variant="contained" name="Futsal" onClick={handleProyectChange}>
+            Futsal
           </Button>
         </li>
         <li>
-          <Button sx={{ backgroundColor: "black" }} variant="contained">
-            Proyecto 4
+          <Button sx={{ backgroundColor: "black" }} variant="contained" name='FotoReportaje' onClick={handleProyectChange}>
+            Foto Reportaje
           </Button>
         </li>
         <li>
-          <Button sx={{ backgroundColor: "black" }} variant="contained">
-            Proyecto 5
+          <Button sx={{ backgroundColor: "black" }} variant="contained" name='LibroDeArtista' onClick={handleProyectChange}>
+            Libro de Artista
           </Button>
         </li>
+          <li>
+          <Button sx={{ backgroundColor: "black" }} variant="contained" name='TrabajosPracticos' onClick={handleProyectChange}>
+            Trabajos Prácticos
+          </Button>
+          </li>
       </ul>
     </>
   );

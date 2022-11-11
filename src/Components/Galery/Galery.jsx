@@ -2,10 +2,13 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import TresPicos from "./Proyects/TresPicos";
 import ProyectList from "./Proyects/ProyectList";
-import ProyectoPrueba from "./Proyects/ProyectoPrueba";
+import Maradona from "./Proyects/Maradona";
 import GaleryItem from "./GaleryItem";
-
+import Futsal from "./Proyects/Futsal";
 import "./galery.css";
+import FotoReportaje from "./Proyects/FotoReportaje";
+import LibroDeArtista from "./Proyects/LibrodeArtista";
+import TrabajosPracticos from "./Proyects/TrabajosPracticos";
 
 export const Galery = () => {
   const [showImage, setShowImage] = useState(false);
@@ -43,9 +46,9 @@ export const Galery = () => {
             data={data}
           />
         );
-      case "Proyecto Prueba":
+      case "Maradona":
         return (
-          <ProyectoPrueba
+          <Maradona
             handleClick={handleClick}
             showImage={showImage}
             setShowImage={setShowImage}
@@ -54,6 +57,50 @@ export const Galery = () => {
             setData={setData}
           />
         );
+        case "Futsal":
+        return (
+          <Futsal
+            handleClick={handleClick}
+            showImage={showImage}
+            setShowImage={setShowImage}
+            setPhotoSrc={setPhotoSrc}
+            photoId={photoId}
+            setData={setData}
+          />
+        );
+        case "FotoReportaje":
+        return (
+          <FotoReportaje
+            handleClick={handleClick}
+            showImage={showImage}
+            setShowImage={setShowImage}
+            setPhotoSrc={setPhotoSrc}
+            photoId={photoId}
+            setData={setData}
+          />
+        );
+        case "LibroDeArtista":
+          return (
+            <LibroDeArtista
+              handleClick={handleClick}
+              showImage={showImage}
+              setShowImage={setShowImage}
+              setPhotoSrc={setPhotoSrc}
+              photoId={photoId}
+              setData={setData}
+            />
+          );
+          case "TrabajosPracticos":
+          return (
+            <TrabajosPracticos
+              handleClick={handleClick}
+              showImage={showImage}
+              setShowImage={setShowImage}
+              setPhotoSrc={setPhotoSrc}
+              photoId={photoId}
+              setData={setData}
+            />
+          );
       default:
         return;
     }
@@ -62,7 +109,7 @@ export const Galery = () => {
   return (
     <>
       {!showImage ? (
-        <div>
+        <div className="page-container">
           <ProyectList
             handleProyectChange={handleProyectChange}
             proyect={proyectName}

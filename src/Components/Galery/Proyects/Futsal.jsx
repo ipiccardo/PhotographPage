@@ -4,11 +4,10 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
-import { Spinner } from "../../Spinner/Spinner";
 
-const TresPicos = ({ handleClick, setData }) => {
+const Futsal = ({ handleClick, setData }) => {
   useEffect(() => {
-    setData(itemData);
+    setData(itemDataThree);
   }, [setData]);
 
   return (
@@ -20,10 +19,10 @@ const TresPicos = ({ handleClick, setData }) => {
               component="div"
               sx={{ backgroundColor: "black", color: "white" }}
             >
-              3 Picos
+              Futsal
             </ListSubheader>
           </ImageListItem>
-          {itemData.map((item) => (
+          {itemDataThree.map((item) => (
             <ImageListItem key={item.img}>
               <img
                 id={item.id}
@@ -41,9 +40,9 @@ const TresPicos = ({ handleClick, setData }) => {
     </>
   );
 };
-const itemData = [
+const itemDataThree = [
   {
-    img: "https://drive.google.com/uc?export=view&id=1wC088M-SK8iIlKduTQN2uYcjEqEVkeds",
+    img: "https://drive.google.com/uc?export=view&id=1qMoE7zxZxU8UYW7S06lGd4HBla6SuiP9",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -52,79 +51,74 @@ const itemData = [
     id: 1,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1RdI2cXkIBV3LKcxr-9dm2xZ0N-m7SdCx",
+    img: "https://drive.google.com/uc?export=view&id=13AgQuibBxZQFUr7BRn0IVKyfB03kevtt",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 2,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1BNe4BAYCeX79E9Ce8SneYnY02bXht-Sx",
+    img: "https://drive.google.com/uc?export=view&id=1LoDSbeedN0Yo88rc_RLQErgC_kRso5ih",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 3,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1FeoL690Ad6X9kNFEOPJtKXb-aISU3zMV",
+    img: "https://drive.google.com/uc?export=view&id=1q8d2vYeQKle5TwKHKFZb7NbxS1ubLacJ",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
-    cols: 2,
     id: 4,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=106Kbnz4lHV3MDtklYbcPYE_zsC4z38hM",
+    img: "https://drive.google.com/uc?export=view&id=1i8L8bQ0jyH6WTL_5laYas6Gy7NKKoE6G",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
-    cols: 2,
     id: 5,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1ksjtipSGA_0TgaWPGsa6bSfPzBblZqOa",
+    img: "https://drive.google.com/uc?export=view&id=1C1cYieMDTq64B6r0lfPCyhxNtv6ydWPc",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
-    rows: 2,
-    cols: 2,
-    featured: true,
     id: 6,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1J9QRDzgtVzhoykGHHYJZj3wWuzHmWrcF",
+    img: "https://drive.google.com/uc?export=view&id=19JrkEf6rw62DjrLI6V65fccFzzPM0KR-",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 7,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1SBJyrNb2UYiyeZ5-g4UXuIzYZDNKq8Gr",
+    img: "https://drive.google.com/uc?export=view&id=13qebAxoxhaakbycGiVkZxb1Al3NirjyR",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 8,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1RusFJIHshN7APCRtDgUaZbRshXwZ_-32",
+    img: "https://drive.google.com/uc?export=view&id=1PpNdk-S8iONh473_S-NwYclPk-FhtHuF",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
     cols: 2,
+    featured: true,
     id: 9,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1rt4j10VlrHe5putyaCYrpJJ2xcq3gYGU",
+    img: "https://drive.google.com/uc?export=view&id=1XNWoPymJNWcSB6qN0O0INTYi1X9M4lVZ",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 10,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1eeoKcoLwI2Wkp02iNNl7ynpbqpST0U1X",
+    img: "https://drive.google.com/uc?export=view&id=1c82dDe739Y3FsqHu5q2uOhXfzFAvOf4Y",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 11,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=10pCtsTAe7aHKDfEfTGje4LGVqbl-Ujwg",
+    img: "https://drive.google.com/uc?export=view&id=19kcYvUDeYtJQKo--sm2A3RKlyluaOFP8",
     title: "Nombre de la foto",
     author: "Alexis Fernández",
-    cols: 2,
     id: 12,
-  },
+  }
 ];
 
-export default TresPicos;
+export default Futsal;

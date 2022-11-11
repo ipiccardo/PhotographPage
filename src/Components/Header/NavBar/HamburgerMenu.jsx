@@ -110,8 +110,9 @@ const HamburgerMenu = ({ open, setOpen }) => {
           <ListItemButton onClick={handleDrawerClose}>
             <NavLink to={"/Galery"}>Galeria</NavLink>
           </ListItemButton>
-          <ListItemButton onClick={handleDrawerClose}>Titulo 3</ListItemButton>
-          <ListItemButton onClick={handleDrawerClose}>Titulo 4</ListItemButton>
+          <ListItemButton onClick={handleDrawerClose}>
+          <NavLink to={"/Biography"}>Biografía</NavLink>
+            </ListItemButton>
         </List>
         <Divider />
       </Drawer>
