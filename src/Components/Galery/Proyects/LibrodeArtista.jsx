@@ -4,6 +4,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
+import Footer from "../../Footer/Footer";
 
 export const LibroDeArtista = ({ handleClick, setData }) => {
   useEffect(() => {
@@ -37,6 +38,7 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
           ))}
         </ImageList>
       </div>
+      <Footer />
     </>
   );
 };

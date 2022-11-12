@@ -8,17 +8,6 @@
     display: flex;
     justify-content: space-between;
     padding-right: 50px;
-    /* background-color: black;
-    color: white;
-    margin-bottom: -50px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-top: 64px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 50px;
-    position: relative;
-    height: 120px; */
 }
 
 
@@ -31,25 +20,11 @@
     margin-right: auto;
     font-size: 12px;
     margin-top: 25px;
-    /* display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    justify-content: space-evenly;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    font-size: 12px;
-    /* margin-top: 25px; */
-    /* bottom: 0;
-    left: 25%;
-    top: 10%; */ 
 }
 
 
-/* .footer-svg-container {
-    margin-top: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 0
-} */
+.footer-svg-container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 

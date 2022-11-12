@@ -2,13 +2,15 @@
   height: 100vh;
   width: 100vw;
   /* background-image: url(https://drive.google.com/uc?export=view&id=1tQ0t54ylAwvfp2aawIAbgNzyPn6qAPtS); */
-  background-image: url(https://drive.google.com/uc?export=view&id=1T8GVoCS7kD31oeheEv7MKf8EylPs5tUZ);
+  /* background-image: url(https://drive.google.com/uc?export=view&id=1T8GVoCS7kD31oeheEv7MKf8EylPs5tUZ); */
+  background-image: url(https://drive.google.com/uc?export=view&id=17XxEeS_8JB_Jr6dq1CTQUTIF9yYPsBts);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -50px;
   position: absolute;
 }
 
+/* 17XxEeS_8JB_Jr6dq1CTQUTIF9yYPsBts */
 
 .title-box {
   position: absolute;
@@ -43,16 +45,20 @@
   }
 }
 @media (max-width: 800px) {
-  .hero {
+  
+  .title-box {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+
+
+/* .hero {
     height: 100vh;
     width: 100%;
     background-image: url(https://drive.google.com/uc?export=view&id=1tQ0t54ylAwvfp2aawIAbgNzyPn6qAPtS);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -50px;
-  }
-  .title-box {
-    width: 90%;
-    left: 5%;
-  }
-}
+  } */

@@ -9,3 +9,5 @@ export const Spinner = () => {
     </Box>
   );
 }
+
+export default Spinner

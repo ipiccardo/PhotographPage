@@ -39,14 +39,14 @@
   }
 }
 @media (max-width: 800px) {
-  .hero {
+  /* .hero {
     height: 100vh;
     width: 100%;
     background-image: url(https://drive.google.com/uc?export=view&id=1tQ0t54ylAwvfp2aawIAbgNzyPn6qAPtS);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -50px;
-  }
+  } */
   .biography-title-box {
     width: 90%;
     left: 5%;
