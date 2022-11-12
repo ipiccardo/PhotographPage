@@ -50,7 +50,6 @@ export const Galery = () => { */
 .galeryContainer {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
 }
 
 .listContainer {
@@ -58,6 +57,7 @@ export const Galery = () => { */
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .listContainer li {
