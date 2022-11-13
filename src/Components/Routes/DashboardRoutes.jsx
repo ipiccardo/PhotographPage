@@ -58,6 +58,7 @@ export const DashBoardRoutes = () => {
                 setShowImage={setShowImage}
                 setPhotoId={setPhotoId}
                 photoId={photoId}
+                data={data}
               />
             )
           }
@@ -82,6 +83,7 @@ export const DashBoardRoutes = () => {
                 setShowImage={setShowImage}
                 setPhotoId={setPhotoId}
                 photoId={photoId}
+                data={data}
               />
             )
           }
@@ -106,6 +108,7 @@ export const DashBoardRoutes = () => {
                 setShowImage={setShowImage}
                 setPhotoId={setPhotoId}
                 photoId={photoId}
+                data={data}
               />
             )
           }

@@ -123,6 +123,7 @@ export const Galery = () => {
           setShowImage={setShowImage}
           setPhotoId={setPhotoId}
           photoId={photoId}
+          data={data}
         />
       )}
     </>

@@ -7,13 +7,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
 
-export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
+export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }) => {
   const handleClose = () => {
     setShowImage(false);
   };
 
   const nextPhoto = () => {
-    photoId !== 12
+    photoId !== data.length
       ? setPhotoId((photoId) => parseInt(photoId) + 1)
       : setPhotoId(1);
   };
@@ -21,7 +21,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId }) => {
   const PreviousPhoto = () => {
     photoId !== 1
       ? setPhotoId((photoId) => parseInt(photoId) - 1)
-      : setPhotoId(12);
+      : setPhotoId(data.length);
   };
 
   useEffect(() => {

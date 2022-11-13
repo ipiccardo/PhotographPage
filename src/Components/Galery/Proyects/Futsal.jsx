@@ -140,20 +140,6 @@ const itemDataThree = [
     author: "Alexis Fernández",
     id: 10,
   },
-  {
-    // img: "https://drive.google.com/uc?export=view&id=1c82dDe739Y3FsqHu5q2uOhXfzFAvOf4Y",
-    img: '/assets/archivo/futsal/11.jpg',
-    title: "Nombre de la foto",
-    author: "Alexis Fernández",
-    id: 11,
-  },
-  {
-    // img: "https://drive.google.com/uc?export=view&id=19kcYvUDeYtJQKo--sm2A3RKlyluaOFP8",
-    img: '/assets/archivo/futsal/12.jpg',
-    title: "Nombre de la foto",
-    author: "Alexis Fernández",
-    id: 12,
-  },
 ];
 
 export default Futsal;
