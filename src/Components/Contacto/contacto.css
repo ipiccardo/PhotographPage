@@ -29,3 +29,10 @@ a {
     justify-content: space-evenly;
     flex-direction: column;
 }
+
+
+@media (max-width: 422px) {
+    .social-media-container {
+        margin-top: 10vh;
+    }
+}

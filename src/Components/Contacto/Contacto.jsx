@@ -32,7 +32,7 @@ export const Contacto = () => {
         </a>
           </div>
           <div className="social-media-div">
-        <span>alexisdariofernandez@gmail</span>
+        <span>alexisdariofernandez@gmail.com</span>
         <a
           rel="noreferrer"
           href="https://alexisdariofernandez@gmail.com"
