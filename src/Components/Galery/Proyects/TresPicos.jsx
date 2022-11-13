@@ -17,13 +17,13 @@ const TresPicos = ({ handleClick, setData }) => {
     setIsLoaded(false);
     setTimeout(() => {
       setIsLoaded(true);
-    }, 2000);
+    }, 1000);
   }, [setData]);
 
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 6000);
+    }, 3000);
   });
  
   return (
@@ -42,13 +42,13 @@ const TresPicos = ({ handleClick, setData }) => {
             <Spinner />
           ) :
           itemData.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.id}>
               <img
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
+                src={`/assets/archivo/trespicos/${item.id}.jpg`}
+                srcSet={`/assets/archivo/trespicos/${item.id}.jpg`}
                 alt={item.title}
                 loading="lazy"
               />
@@ -62,7 +62,8 @@ const TresPicos = ({ handleClick, setData }) => {
 };
 const itemData = [
   {
-    img: "https://drive.google.com/uc?export=view&id=1wC088M-SK8iIlKduTQN2uYcjEqEVkeds",
+    // img: "https://drive.google.com/uc?export=view&id=1wC088M-SK8iIlKduTQN2uYcjEqEVkeds",
+    img: '/assets/archivo/trespicos/1.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -71,33 +72,38 @@ const itemData = [
     id: 1,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1RdI2cXkIBV3LKcxr-9dm2xZ0N-m7SdCx",
+    // img: "https://drive.google.com/uc?export=view&id=1RdI2cXkIBV3LKcxr-9dm2xZ0N-m7SdCx",
+    img: '/assets/archivo/trespicos/2.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 2,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1BNe4BAYCeX79E9Ce8SneYnY02bXht-Sx",
+    // img: "https://drive.google.com/uc?export=view&id=1BNe4BAYCeX79E9Ce8SneYnY02bXht-Sx",
+    img: '/assets/archivo/trespicos/3.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 3,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1FeoL690Ad6X9kNFEOPJtKXb-aISU3zMV",
+    // img: "https://drive.google.com/uc?export=view&id=1FeoL690Ad6X9kNFEOPJtKXb-aISU3zMV",
+    img: '/assets/archivo/trespicos/4.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     cols: 2,
     id: 4,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=106Kbnz4lHV3MDtklYbcPYE_zsC4z38hM",
+    // img: "https://drive.google.com/uc?export=view&id=106Kbnz4lHV3MDtklYbcPYE_zsC4z38hM",
+    img: '/assets/archivo/trespicos/5.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     cols: 2,
     id: 5,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1ksjtipSGA_0TgaWPGsa6bSfPzBblZqOa",
+    // img: "https://drive.google.com/uc?export=view&id=1ksjtipSGA_0TgaWPGsa6bSfPzBblZqOa",
+    img: '/assets/archivo/trespicos/6.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -106,19 +112,22 @@ const itemData = [
     id: 6,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1J9QRDzgtVzhoykGHHYJZj3wWuzHmWrcF",
+    // img: "https://drive.google.com/uc?export=view&id=1J9QRDzgtVzhoykGHHYJZj3wWuzHmWrcF",
+    img: '/assets/archivo/trespicos/7.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 7,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1SBJyrNb2UYiyeZ5-g4UXuIzYZDNKq8Gr",
+    // img: "https://drive.google.com/uc?export=view&id=1SBJyrNb2UYiyeZ5-g4UXuIzYZDNKq8Gr",
+    img: '/assets/archivo/trespicos/8.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 8,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1RusFJIHshN7APCRtDgUaZbRshXwZ_-32",
+    // img: "https://drive.google.com/uc?export=view&id=1RusFJIHshN7APCRtDgUaZbRshXwZ_-32",
+    img: '/assets/archivo/trespicos/9.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -126,19 +135,22 @@ const itemData = [
     id: 9,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1rt4j10VlrHe5putyaCYrpJJ2xcq3gYGU",
+    // img: "https://drive.google.com/uc?export=view&id=1rt4j10VlrHe5putyaCYrpJJ2xcq3gYGU",
+    img: '/assets/archivo/trespicos/10.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 10,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1eeoKcoLwI2Wkp02iNNl7ynpbqpST0U1X",
+    // img: "https://drive.google.com/uc?export=view&id=1eeoKcoLwI2Wkp02iNNl7ynpbqpST0U1X",
+    img: '/assets/archivo/trespicos/11.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 11,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=10pCtsTAe7aHKDfEfTGje4LGVqbl-Ujwg",
+    // img: "https://drive.google.com/uc?export=view&id=10pCtsTAe7aHKDfEfTGje4LGVqbl-Ujwg",
+    img: '/assets/archivo/trespicos/12.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     cols: 2,

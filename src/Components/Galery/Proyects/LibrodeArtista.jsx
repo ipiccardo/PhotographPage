@@ -17,13 +17,13 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
     setIsLoaded(false);
     setTimeout(() => {
       setIsLoaded(true);
-    }, 2000);
+    }, 1000);
   }, [setData]);
 
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 6000);
+    }, 3000);
   });
 
 
@@ -48,8 +48,8 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
+                src={`/assets/librodeartista/${item.id}.jpg`}
+                srcSet={`/assets/librodeartista/${item.id}.jpg`}
                 alt={item.title}
                 loading="lazy"
               />
@@ -63,7 +63,8 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
 };
 const itemDataFive = [
   {
-    img: "https://drive.google.com/uc?export=view&id=1OArt45tMD6Fh5odbsTWRwK6nc7yr2keu",
+    // img: "https://drive.google.com/uc?export=view&id=1OArt45tMD6Fh5odbsTWRwK6nc7yr2keu",
+    img: '/assets/librodeartista/1.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -72,49 +73,57 @@ const itemDataFive = [
     id: 1,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1J0lkPcOaOqA5V3UI6uaBPqRlvhU8eKlH",
+    // img: "https://drive.google.com/uc?export=view&id=1J0lkPcOaOqA5V3UI6uaBPqRlvhU8eKlH",
+    img: '/assets/librodeartista/2.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 2,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=19vKjbe88lO7p60_AMrzF4vTEuDeZEI0z",
+    // img: "https://drive.google.com/uc?export=view&id=19vKjbe88lO7p60_AMrzF4vTEuDeZEI0z",
+    img: '/assets/librodeartista/3.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 3,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1ZHgCP7odiIGPZ-J6I_5ptRkLFFfBG1Nn",
+    // img: "https://drive.google.com/uc?export=view&id=1ZHgCP7odiIGPZ-J6I_5ptRkLFFfBG1Nn",
+    img: '/assets/librodeartista/4.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 4,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1zk8EeFh7mjx_z_5w16Oox9Ow1mEyUegI",
+    // img: "https://drive.google.com/uc?export=view&id=1zk8EeFh7mjx_z_5w16Oox9Ow1mEyUegI",
+    img: '/assets/librodeartista/5.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 5,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1HAoz-jlp33fRV3CnPxmEKNVIPV0A_x2e",
+    // img: "https://drive.google.com/uc?export=view&id=1HAoz-jlp33fRV3CnPxmEKNVIPV0A_x2e",
+    img: '/assets/librodeartista/6.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 6,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1n8P5sUMTd8S3e2_w9-Mfy2GJRHtGnkhR",
+    // img: "https://drive.google.com/uc?export=view&id=1n8P5sUMTd8S3e2_w9-Mfy2GJRHtGnkhR",
+    img: '/assets/librodeartista/7.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 7,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=10-APsmf0gsrUqeMSP5MuwNNPzNboLFuM",
+    // img: "https://drive.google.com/uc?export=view&id=10-APsmf0gsrUqeMSP5MuwNNPzNboLFuM",
+    img: '/assets/librodeartista/8.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 8,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1IEMkfTaqLRfTXL8nWJUfcoPva09HCgr0",
+    // img: "https://drive.google.com/uc?export=view&id=1IEMkfTaqLRfTXL8nWJUfcoPva09HCgr0",
+    img: '/assets/librodeartista/9.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -123,25 +132,21 @@ const itemDataFive = [
     id: 9,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1A60YfqJEnHTNLlGXnsnlltlsBL1BjEFf",
+    // img: "https://drive.google.com/uc?export=view&id=1A60YfqJEnHTNLlGXnsnlltlsBL1BjEFf",
+    img: '/assets/librodeartista/10.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 10,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1OArt45tMD6Fh5odbsTWRwK6nc7yr2keu",
+    // img: "https://drive.google.com/uc?export=view&id=1OArt45tMD6Fh5odbsTWRwK6nc7yr2keu",
+    img: '/assets/librodeartista/11.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
     cols: 2,
     featured: true,
     id: 11,
-  },
-  {
-    img: "https://drive.google.com/uc?export=view&id=1J0lkPcOaOqA5V3UI6uaBPqRlvhU8eKlH",
-    title: "Nombre de la foto",
-    author: "Alexis Fernández",
-    id: 12,
   },
 ];
 

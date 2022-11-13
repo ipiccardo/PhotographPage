@@ -1,7 +1,8 @@
 .biography-hero {
   height: 100vh;
   width: 100vw;
-  background-image: url(https://drive.google.com/uc?export=view&id=1y0aU-UnomBebs-k_Xh5UB2Ci8R63OiPy);
+  /* background-image: url(https://drive.google.com/uc?export=view&id=1y0aU-UnomBebs-k_Xh5UB2Ci8R63OiPy); */
+  background-image: url('../../../public/assets/biografia/TP_PORTAFOLIO_ALEXIS\ FERNANDEZ_copia-16.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -50px;

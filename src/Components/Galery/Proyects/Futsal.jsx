@@ -15,7 +15,7 @@ const Futsal = ({ handleClick, setData }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 6000);
+    }, 3000);
   });
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Futsal = ({ handleClick, setData }) => {
     setIsLoaded(false);
     setTimeout(() => {
       setIsLoaded(true);
-    }, 2000);
+    }, 1000);
   }, [setData]);
 
 
@@ -44,13 +44,13 @@ const Futsal = ({ handleClick, setData }) => {
             <Spinner />
           ) : 
             itemDataThree.map((item) => (
-              <ImageListItem key={item.img}>
+              <ImageListItem key={item.id}>
                 <img
                   id={item.id}
                   className="multyImage"
                   onClick={handleClick}
-                  src={`${item.img}`}
-                  srcSet={`${item.img}`}
+                  src={`/assets/archivo/futsal/${item.id}.jpg`}
+                  srcSet={`/assets/archivo/futsal/${item.id}.jpg`}
                   alt={item.title}
                   loading="lazy"
                 />
@@ -65,7 +65,8 @@ const Futsal = ({ handleClick, setData }) => {
 };
 const itemDataThree = [
   {
-    img: "https://drive.google.com/uc?export=view&id=1qMoE7zxZxU8UYW7S06lGd4HBla6SuiP9",
+    // img: "https://drive.google.com/uc?export=view&id=1qMoE7zxZxU8UYW7S06lGd4HBla6SuiP9",
+    img: '/assets/archivo/futsal/1.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -74,49 +75,57 @@ const itemDataThree = [
     id: 1,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=13AgQuibBxZQFUr7BRn0IVKyfB03kevtt",
+    // img: "https://drive.google.com/uc?export=view&id=13AgQuibBxZQFUr7BRn0IVKyfB03kevtt",
+    img: '/assets/archivo/futsal/2.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 2,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1LoDSbeedN0Yo88rc_RLQErgC_kRso5ih",
+    // img: "https://drive.google.com/uc?export=view&id=1LoDSbeedN0Yo88rc_RLQErgC_kRso5ih",
+    img: '/assets/archivo/futsal/3.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 3,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1q8d2vYeQKle5TwKHKFZb7NbxS1ubLacJ",
+    // img: "https://drive.google.com/uc?export=view&id=1q8d2vYeQKle5TwKHKFZb7NbxS1ubLacJ",
+    img: '/assets/archivo/futsal/4.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 4,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1i8L8bQ0jyH6WTL_5laYas6Gy7NKKoE6G",
+    // img: "https://drive.google.com/uc?export=view&id=1i8L8bQ0jyH6WTL_5laYas6Gy7NKKoE6G",
+    img: '/assets/archivo/futsal/5.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 5,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1C1cYieMDTq64B6r0lfPCyhxNtv6ydWPc",
+    // img: "https://drive.google.com/uc?export=view&id=1C1cYieMDTq64B6r0lfPCyhxNtv6ydWPc",
+    img: '/assets/archivo/futsal/6.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 6,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=19JrkEf6rw62DjrLI6V65fccFzzPM0KR-",
+    // img: "https://drive.google.com/uc?export=view&id=19JrkEf6rw62DjrLI6V65fccFzzPM0KR-",
+    img: '/assets/archivo/futsal/7.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 7,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=13qebAxoxhaakbycGiVkZxb1Al3NirjyR",
+    // img: "https://drive.google.com/uc?export=view&id=13qebAxoxhaakbycGiVkZxb1Al3NirjyR",
+    img: '/assets/archivo/futsal/8.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 8,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1PpNdk-S8iONh473_S-NwYclPk-FhtHuF",
+    // img: "https://drive.google.com/uc?export=view&id=1PpNdk-S8iONh473_S-NwYclPk-FhtHuF",
+    img: '/assets/archivo/futsal/9.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     rows: 2,
@@ -125,19 +134,22 @@ const itemDataThree = [
     id: 9,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1XNWoPymJNWcSB6qN0O0INTYi1X9M4lVZ",
+    // img: "https://drive.google.com/uc?export=view&id=1XNWoPymJNWcSB6qN0O0INTYi1X9M4lVZ",
+    img: '/assets/archivo/futsal/10.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 10,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=1c82dDe739Y3FsqHu5q2uOhXfzFAvOf4Y",
+    // img: "https://drive.google.com/uc?export=view&id=1c82dDe739Y3FsqHu5q2uOhXfzFAvOf4Y",
+    img: '/assets/archivo/futsal/11.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 11,
   },
   {
-    img: "https://drive.google.com/uc?export=view&id=19kcYvUDeYtJQKo--sm2A3RKlyluaOFP8",
+    // img: "https://drive.google.com/uc?export=view&id=19kcYvUDeYtJQKo--sm2A3RKlyluaOFP8",
+    img: '/assets/archivo/futsal/12.jpg',
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 12,
