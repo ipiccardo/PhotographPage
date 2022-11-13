@@ -15,7 +15,7 @@ const Futsal = ({ handleClick, setData }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 3000);
+    }, 2000);
   });
 
   useEffect(() => {
