@@ -2,12 +2,28 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Spinner from "../../Spinner/Spinner";
+import Footer from "../../Footer/Footer";
 import "../galery.css";
 
 const Maradona = ({ handleClick, setData }) => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true);
+    }, 6000);
+  });
+  
   useEffect(() => {
     setData(itemDataTwo);
+    setIsLoaded(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
   }, [setData]);
 
   return (
@@ -22,7 +38,10 @@ const Maradona = ({ handleClick, setData }) => {
               Maradona
             </ListSubheader>
           </ImageListItem>
-          {itemDataTwo.map((item) => (
+          {!isLoaded ? (
+            <Spinner />
+          ) : 
+          itemDataTwo.map((item) => (
             <ImageListItem key={item.img}>
               <img
                 id={item.id}
@@ -37,6 +56,7 @@ const Maradona = ({ handleClick, setData }) => {
           ))}
         </ImageList>
       </div>
+      {showFooter && <Footer />}
     </>
   );
 };

@@ -2,14 +2,30 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../galery.css";
 import Footer from "../../Footer/Footer";
+import Spinner from "../../Spinner/Spinner";
 
 export const LibroDeArtista = ({ handleClick, setData }) => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
+
   useEffect(() => {
     setData(itemDataFive);
+    setIsLoaded(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
   }, [setData]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true);
+    }, 6000);
+  });
+
 
   return (
     <>
@@ -23,7 +39,10 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
               Libro de Artista
             </ListSubheader>
           </ImageListItem>
-          {itemDataFive.map((item) => (
+          {!isLoaded ? (
+            <Spinner />
+          ) : 
+          itemDataFive.map((item) => (
             <ImageListItem key={item.id}>
               <img
                 id={item.id}
@@ -38,7 +57,7 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
           ))}
         </ImageList>
       </div>
-      <Footer />
+      {showFooter && <Footer />}
     </>
   );
 };

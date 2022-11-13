@@ -2,14 +2,30 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../galery.css";
+import Spinner from "../../Spinner/Spinner";
+import Footer from "../../Footer/Footer";
 
 const TresPicos = ({ handleClick, setData }) => {
+  
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
+  
   useEffect(() => {
     setData(itemData);
+    setIsLoaded(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
   }, [setData]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true);
+    }, 6000);
+  });
+ 
   return (
     <>
       <div className="galeryContainer">
@@ -22,7 +38,10 @@ const TresPicos = ({ handleClick, setData }) => {
               3 Picos
             </ListSubheader>
           </ImageListItem>
-          {itemData.map((item) => (
+          {!isLoaded ? (
+            <Spinner />
+          ) :
+          itemData.map((item) => (
             <ImageListItem key={item.img}>
               <img
                 id={item.id}
@@ -37,6 +56,7 @@ const TresPicos = ({ handleClick, setData }) => {
           ))}
         </ImageList>
       </div>
+      {showFooter && <Footer />}
     </>
   );
 };

@@ -2,14 +2,29 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
+import Spinner from "../../Spinner/Spinner";
 import "../galery.css";
 
 export const TrabajosPracticos = ({ handleClick, setData }) => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
+
   useEffect(() => {
     setData(itemDataSix);
+    setIsLoaded(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
   }, [setData]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true);
+    }, 6000);
+  });
 
   return (
     <>
@@ -23,7 +38,10 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
               Trabajos Practicos
             </ListSubheader>
           </ImageListItem>
-          {itemDataSix.map((item) => (
+          {!isLoaded ? (
+            <Spinner />
+          ) : 
+          itemDataSix.map((item) => (
             <ImageListItem key={item.img}>
               <img
                 id={item.id}
@@ -38,7 +56,7 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
           ))}
         </ImageList>
       </div>
-      <Footer />
+      {showFooter && <Footer />}
     </>
   );
 };

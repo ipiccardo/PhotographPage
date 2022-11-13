@@ -5,44 +5,65 @@ import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
 import Footer from "../../Footer/Footer";
+import Spinner from "../../Spinner/Spinner";
 
 
 export const FotoReportaje = ({ handleClick, setData }) => {
 
   const [isLoaded, setIsLoaded] = useState(false)
+  const [showFooter, setShowFooter] = useState(false)
 
   useEffect(() => {
     setData(itemDataFour);
+    setIsLoaded(false)
+    setTimeout(() => {
+      setIsLoaded(true)  
+    }, 2000)
   }, [setData]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true)
+    }, 6000)
+  })
+
 
   return (
     <>
-      <div className="galeryContainer">
+
+  <div className="galeryContainer">
         <ImageList sx={{ width: "80%", height: "100%" }}>
           <ImageListItem key="Subheader" cols={2}>
             <ListSubheader
               component="div"
               sx={{ backgroundColor: "black", color: "white" }}
-            >
+              >
               Foto Reportaje
             </ListSubheader>
           </ImageListItem>
-          {itemDataFour.map((item) => (
+        {
+          !isLoaded ? <Spinner />
+          :
+          itemDataFour.map((item) => (
             <ImageListItem  key={item.img}>
               <img
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                src={`${item.img}`}
                 srcSet={`${item.img}`}
                 alt={item.title}
-                loading="lazy"
-              />
+                // loading="lazy"
+                />
             </ImageListItem>
-          ))}
+          ))
+        } 
         </ImageList>
       </div>
-      <Footer />
+    {
+    showFooter && 
+        <Footer />
+}
     </>
   );
 };
@@ -55,7 +76,6 @@ const itemDataFour = [
   {
     img: "https://drive.google.com/uc?export=view&id=1eS3pNGB6npUhE7l_z3We34C7sKkuf3Xx",
     title: "Nombre de la foto",
-    author: "Alexis Fernández",
     id: 2,
   },
   {

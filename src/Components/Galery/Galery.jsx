@@ -6,7 +6,6 @@ import Maradona from "./Proyects/Maradona";
 import GaleryItem from "./GaleryItem";
 import Futsal from "./Proyects/Futsal";
 import "./galery.css";
-import Footer from "../Footer/Footer";
 // import FotoReportaje from "./Proyects/FotoReportaje";
 // import LibroDeArtista from "./Proyects/LibrodeArtista";
 // import TrabajosPracticos from "./Proyects/TrabajosPracticos";
@@ -114,9 +113,8 @@ export const Galery = () => {
           <ProyectList
             handleProyectChange={handleProyectChange}
             proyect={proyectName}
-          />
+            />
           {proyect(proyectName)}
-          <Footer />
         </div>
       ) : (
         <GaleryItem

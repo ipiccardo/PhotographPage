@@ -2,13 +2,31 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../galery.css";
+import Spinner from "../../Spinner/Spinner";
+import Footer from "../../Footer/Footer";
 
 const Futsal = ({ handleClick, setData }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFooter(true);
+    }, 6000);
+  });
+
   useEffect(() => {
     setData(itemDataThree);
+    setIsLoaded(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
   }, [setData]);
+
+
 
   return (
     <>
@@ -22,21 +40,26 @@ const Futsal = ({ handleClick, setData }) => {
               Futsal
             </ListSubheader>
           </ImageListItem>
-          {itemDataThree.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                id={item.id}
-                className="multyImage"
-                onClick={handleClick}
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
+          {!isLoaded ? (
+            <Spinner />
+          ) : 
+            itemDataThree.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  id={item.id}
+                  className="multyImage"
+                  onClick={handleClick}
+                  src={`${item.img}`}
+                  srcSet={`${item.img}`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))
+          }
         </ImageList>
       </div>
+      {showFooter && <Footer />}
     </>
   );
 };
@@ -118,7 +141,7 @@ const itemDataThree = [
     title: "Nombre de la foto",
     author: "Alexis Fernández",
     id: 12,
-  }
+  },
 ];
 
 export default Futsal;
