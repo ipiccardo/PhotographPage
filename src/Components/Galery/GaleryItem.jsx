@@ -37,7 +37,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }
             backgroundImage: `url(${photoSrc})`,
             backgroundPosition: "center",
             backgroundSize: "contain",
-            height: "90vh",
+            height: "85vh",
             width: "100vw",
             backgroundRepeat: "no-repeat",
             marginTop: '-30px',
