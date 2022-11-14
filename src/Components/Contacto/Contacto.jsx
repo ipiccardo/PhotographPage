@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./contacto.css";
+import Footer from "../Footer/Footer";
 
 export const Contacto = () => {
   return (
     <>
       <h1>CONTACTO</h1>
-      <div className="social-media-container" style={{ fontSize: "4em" }}>
+      <div className="social-media-container" style={{ fontSize: "4em", marginBottom: '300px' }}>
         <div className="social-media-div">
         <span>chinofernandezph</span>
         <a
@@ -43,6 +44,7 @@ export const Contacto = () => {
         </a>
         </div>
       </div>
+        <Footer />
     </>
   );
 };
