@@ -49,8 +49,8 @@ const Maradona = ({ handleClick, setData }) => {
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`/assets/archivo/maradona/${item.id}.jpg`}
-                  srcSet={`/assets/archivo/maradona/${item.id}.jpg`}
+                src={`/assets/archivo/maradona/grilla/${item.id}.jpg`}
+                  srcSet={`/assets/archivo/maradona/grilla/${item.id}.jpg`}
                 alt={item.title}
                 loading="lazy"
               />

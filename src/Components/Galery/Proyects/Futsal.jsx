@@ -49,8 +49,8 @@ const Futsal = ({ handleClick, setData }) => {
                   id={item.id}
                   className="multyImage"
                   onClick={handleClick}
-                  src={`/assets/archivo/futsal/${item.id}.jpg`}
-                  srcSet={`/assets/archivo/futsal/${item.id}.jpg`}
+                  src={`/assets/archivo/futsal/grilla/${item.id}.jpg`}
+                  srcSet={`/assets/archivo/futsal/grilla/${item.id}.jpg`}
                   alt={item.title}
                   loading="lazy"
                 />

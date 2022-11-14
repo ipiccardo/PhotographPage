@@ -32,7 +32,7 @@ export const FotoReportaje = ({ handleClick, setData }) => {
     <>
 
   <div className="galeryContainer">
-        <ImageList sx={{ width: "80%", height: "100%" }}>
+        <ImageList sx={{ width: "80%", height: "100%" }} >
           <ImageListItem key="Subheader" cols={2}>
             <ListSubheader
               component="div"
@@ -45,13 +45,13 @@ export const FotoReportaje = ({ handleClick, setData }) => {
           !isLoaded ? <Spinner />
           :
           itemDataFour.map((item) => (
-            <ImageListItem  key={item.img}>
+            <ImageListItem key={item.img}>
               <img
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`/assets/fotorreportaje/${item.id}.jpg`}
-                srcSet={`/assets/fotorreportaje/${item.id}.jpg`}
+                src={`/assets/fotorreportaje/grilla/${item.id}.jpg`}
+                srcSet={`/assets/fotorreportaje/grilla/${item.id}.jpg`}
                 alt={item.title}
                 // loading="lazy"
                 />
