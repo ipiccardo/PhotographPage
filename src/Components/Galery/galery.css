@@ -91,7 +91,7 @@ export const Galery = () => { */
   position: absolute;
   background: black;
   margin-top: -100px;
-  padding-bottom: 450px;
+  padding-bottom: 560px;
 }
 
 .container-description {
@@ -105,3 +105,4 @@ export const Galery = () => { */
   margin-left: 20px;
   margin-right: 20px;
 }
+
