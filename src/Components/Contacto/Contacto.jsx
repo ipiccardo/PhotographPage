@@ -9,7 +9,7 @@ export const Contacto = () => {
   return (
     <>
       <h1>CONTACTO</h1>
-      <div className="social-media-container" style={{ fontSize: "4em", marginBottom: '300px' }}>
+      <div className="social-media-container" style={{ fontSize: "4em"}}>
         <div className="social-media-div">
         <span>chinofernandezph</span>
         <a
