@@ -63,7 +63,6 @@ export const Galery = () => { */
   flex-wrap: wrap;
   margin-bottom: 50px;
   max-width: 1200px;
-  margin-bottom: 50px;
 }
 
 .listContainer li {
@@ -93,4 +92,5 @@ export const Galery = () => { */
   position: absolute;
   background: black;
   margin-top: -100px;
+  padding-bottom: 400px
 }
