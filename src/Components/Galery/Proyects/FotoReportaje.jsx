@@ -153,6 +153,61 @@ const itemDataFour = [
     id: 12,
     description: 'Juguetes donados que conforman una de las esculturas emplazadas en el anfiteatro del Distrito Arcos. Ciudad Autónoma de Buenos Aires, 09 de octubre de 2022.'
   },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/13.jpg',
+    title: "Nombre de la foto",
+    id: 13,
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/14.jpg',
+    title: "Nombre de la foto",
+    id: 14,
+    description: 'Grúa inactiva en el dique 1 de Puerto Madero. Estas grúas llegaron al puerto de Buenos Aires, procedentes del otro lado de la Alemania Democrática en el año 1979. 29 de octubre de 2022, Ciudad Autónoma de Buenos Aires.'
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/15.jpg',
+    title: "Nombre de la foto",
+    id: 15,
+    description: 'Vista de un sector en obra de la estación Diagonal Norte de la línea C del subte, en la Ciudad Autónoma de Buenos Aires, Argentina, el 6 de Octubre de 2022.'
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/16.jpg',
+    title: "Nombre de la foto",
+    id: 16,
+    description: 'Vista de la terminal de colectivos de la linea 41, en la Ciudad Autónoma de Buenos Aires, Argentina, el 6 de Octubre de 2022.'
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/17.jpg',
+    title: "Nombre de la foto",
+    id: 17,
+    description: 'Vista de un baño en la Ciudad Autónoma de Buenos Aires, Argentina, el 27 de Octubre de 2022.'
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/18.jpg',
+    title: "Nombre de la foto",
+    id: 18,
+    description: 'Fachada de una casa con grafittis y afiches. 30 de octubre de 2022. C.A.B.A Argentina.'
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/19.jpg',
+    title: "Nombre de la foto",
+    id: 19,
+    description: 'Mural en uno de los muros del cementerio de Chacarita. 30 de octubre de 2022. C.A.B.A. Argentina.'
+  },
+  {
+    // img: "https://drive.google.com/uc?export=view&id=1TU3JcG4XJ95LC81fB2gj1nKmfnQVUDIT",
+    img: '/assets/fotorreportaje/20.jpg',
+    title: "Nombre de la foto",
+    id: 20,
+    description: 'Pintadas y calcomanias peronistas. 30 de octubre de 2022. C.A.B.A. Argentina.'
+  },
 ];
 
 export default FotoReportaje;
