@@ -18,6 +18,7 @@ const Header = () => {
     <>
       <Box style={{ zIndex: "1000 !important" }} sx={{ flexGrow: 1}}>
         <AppBar position="fixed" open={open} sx={{ backgroundColor: "black" }}>
+          <div className="navBar-container">
           <Toolbar>
             <IconButton
               color="inherit"
@@ -25,7 +26,7 @@ const Header = () => {
               onClick={handleDrawerOpen}
               edge="start"
               sx={{ mr: 2, ...(open && { display: "none" }) }}
-            >
+              >
               <MenuIcon />
             </IconButton>
             {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -33,6 +34,7 @@ const Header = () => {
             </Typography> */}
             <span className="nav-item nav-link text-info">ALEXIS FERNÁNDEZ</span>
           </Toolbar>
+            </div>
         </AppBar>
         <HamburgerMenu open={open} setOpen={setOpen} />
       </Box>

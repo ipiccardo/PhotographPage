@@ -24,7 +24,7 @@ export const FotoReportaje = ({ handleClick, setData }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true)
-    }, 2000)
+    }, 2500)
   })
 
 

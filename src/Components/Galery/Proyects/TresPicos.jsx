@@ -23,7 +23,7 @@ const TresPicos = ({ handleClick, setData }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 2000);
+    }, 2500);
   });
  
   return (
