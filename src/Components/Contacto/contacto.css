@@ -29,6 +29,9 @@ a {
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
     flex-direction: column;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 export const Contacto = () => {
   return (
     <>
+    <div>
       <h1>CONTACTO</h1>
       <div className="social-media-container" style={{ fontSize: "4em"}}>
         <div className="social-media-div">
@@ -39,11 +40,12 @@ export const Contacto = () => {
           href="https://alexisdariofernandez@gmail.com"
           target="_blank"
           title="alexisdariofernandez@gmail.com"
-        >
+          >
           <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
         </a>
         </div>
       </div>
+          </div>
         <Footer />
     </>
   );
