@@ -12,7 +12,7 @@ const ProyectList = ({ handleProyectChange }) => {
             variant="contained"
             name="tres picos"
           >
-            3 Picos
+           Trekking Tres Picos
           </Button>
         </li>
         <li>
@@ -22,12 +22,12 @@ const ProyectList = ({ handleProyectChange }) => {
             variant="contained"
             name="Maradona"
           >
-            Maradona
+           Maradona D10S
           </Button>
         </li>
         <li>
           <Button sx={{ backgroundColor: "black" }} variant="contained" name="Futsal" onClick={handleProyectChange}>
-            Futsal
+            Futsal Brown
           </Button>
         </li>
         {/* <li>

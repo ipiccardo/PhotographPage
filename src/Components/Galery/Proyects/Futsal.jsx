@@ -37,7 +37,7 @@ const Futsal = ({ handleClick, setData }) => {
               component="div"
               sx={{ backgroundColor: "black", color: "white" }}
             >
-              Futsal
+              Futsal Brown
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (

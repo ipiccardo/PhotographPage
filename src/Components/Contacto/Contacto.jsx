@@ -12,11 +12,11 @@ export const Contacto = () => {
         <h1>CONTACTO</h1>
         <div className="social-media-container" style={{ fontSize: "4em" }}>
           <div className="social-media-div">
-            <span>chinofernandezph</span>
+            <span>un_chino</span>
             <a
               className="social-media-links"
               rel="noreferrer"
-              href="https://instagram.com/chinofernandezph?igshid=YmMyMTA2M2Y="
+              href="https://instagram.com/un_chino?igshid=YmMyMTA2M2Y="
               target="_blank"
             >
               <FontAwesomeIcon icon={faInstagram} />
