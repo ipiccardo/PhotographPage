@@ -84,7 +84,6 @@ export const Galery = () => { */
     /* height: 67vw; */
   }
 }
- 
 
 .galery-item-background {
   width: 100vw;
@@ -92,5 +91,17 @@ export const Galery = () => { */
   position: absolute;
   background: black;
   margin-top: -100px;
-  padding-bottom: 400px
+  padding-bottom: 450px;
+}
+
+.container-description {
+  position: absolute;
+  color: white;
+  background: black;
+  width: 100%;
+}
+
+.description {
+  margin-left: 20px;
+  margin-right: 20px;
 }

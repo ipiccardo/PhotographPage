@@ -7,10 +7,11 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useEffect } from "react";
 // import Footer from "../Footer/Footer";
 
-export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }) => {
+export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data}) => {
   const handleClose = () => {
     setShowImage(false);
   };
+
 
   const nextPhoto = () => {
     photoId !== data.length
@@ -72,6 +73,15 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }
             }
           </IconButton>
         </div>
+      </div>
+      <div className="container-description">
+        {
+          data.map(({description, id}) => {
+            return (
+              <p className="description">{id === photoId && description}</p>
+            )
+          })
+        }
       </div>
       {/* <Footer /> */}
     </>
