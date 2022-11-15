@@ -30,6 +30,8 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }
 
   return (
     <>
+        <div></div>
+        <div className="galery-item-background"></div>
       <div style={{ position: "relative" }}>
         <div className="imageContainer"></div>
         <div
