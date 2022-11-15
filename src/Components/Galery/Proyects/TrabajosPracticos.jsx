@@ -47,8 +47,8 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`/assets/trabajospracticos/grilla/${item.id}.jpg`}
-                srcSet={`/assets/trabajospracticos/grilla/${item.id}.jpg`}
+                src={`/assets/trabajospracticos/${item.id}.jpg`}
+                srcSet={`/assets/trabajospracticos/${item.id}.jpg`}
                 alt={item.title}
                 loading="lazy"
               />

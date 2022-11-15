@@ -47,8 +47,8 @@ const TresPicos = ({ handleClick, setData }) => {
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`/assets/archivo/trespicos/grilla/${item.id}.jpg`}
-                srcSet={`/assets/archivo/trespicos/grilla/${item.id}.jpg`}
+                src={`/assets/archivo/trespicos/${item.id}.jpg`}
+                srcSet={`/assets/archivo/trespicos/${item.id}.jpg`}
                 alt={item.title}
                 loading="lazy"
               />

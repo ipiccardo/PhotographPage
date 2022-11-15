@@ -5,7 +5,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect } from "react";
-import Footer from "../Footer/Footer";
+// import Footer from "../Footer/Footer";
 
 export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }) => {
   const handleClose = () => {
@@ -73,7 +73,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data }
           </IconButton>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

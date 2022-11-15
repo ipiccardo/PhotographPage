@@ -50,8 +50,8 @@ export const FotoReportaje = ({ handleClick, setData }) => {
                 id={item.id}
                 className="multyImage"
                 onClick={handleClick}
-                src={`/assets/fotorreportaje/grilla/${item.id}.jpg`}
-                srcSet={`/assets/fotorreportaje/grilla/${item.id}.jpg`}
+                src={`/assets/fotorreportaje/${item.id}.jpg`}
+                srcSet={`/assets/fotorreportaje/${item.id}.jpg`}
                 alt={item.title}
                 // loading="lazy"
                 />
