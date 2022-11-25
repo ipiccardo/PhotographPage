@@ -1,5 +1,6 @@
 import React from "react";
 import "./Biography.css";
+import Footer from "../Footer/Footer";
 
 export const Biography = () => {
   return (
@@ -23,6 +24,7 @@ export const Biography = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

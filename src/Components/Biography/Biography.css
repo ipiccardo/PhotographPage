@@ -31,9 +31,10 @@
 
 @media (max-width: 1050px) {
   .biography-hero {
-    background-position: top;
+    background-position: center;
     margin-top: 0px;
     width: 300vw;
+    max-height: 400px;
   }
   .biography-text {
     width: 100vw;
