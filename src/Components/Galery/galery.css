@@ -111,3 +111,10 @@ export const Galery = () => { */
     max-height: 400px;
   }
 }
+
+@media (max-width: 400px) {
+  .image {
+    max-height: 200px;
+    margin-top: 30px !important;
+  }
+}
