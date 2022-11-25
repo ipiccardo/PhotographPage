@@ -1,14 +1,47 @@
+.biography-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  margin-top: -50px;
+  padding: 16px;
+}
+
+.biography-text {
+  width: 30rem;
+  text-align: justify;
+  margin-top: -50px;
+}
+
+.biography-text h2 {
+  text-align: center;
+}
+
 .biography-hero {
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
   /* background-image: url(https://drive.google.com/uc?export=view&id=1y0aU-UnomBebs-k_Xh5UB2Ci8R63OiPy); */
   background-image: url('../../../public/assets/biografia/TP_PORTAFOLIO_ALEXIS\ FERNANDEZ_copia-16.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin-top: -50px;
-  position: absolute;
+  /* position: absolute; */
   background-position: center;
 }
+
+@media (max-width: 1050px) {
+  .biography-hero {
+    background-position: top;
+    margin-top: 0px;
+    width: 300vw;
+  }
+  .biography-text {
+    width: 100vw;
+    margin-top: 0px;
+  }
+}
+
+
 
 .biography-title-box {
   position: absolute;
