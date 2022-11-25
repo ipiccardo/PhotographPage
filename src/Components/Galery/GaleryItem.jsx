@@ -35,7 +35,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
         <div className="galery-item-background"></div>
       <div style={{ position: "relative" }}>
         <div className="imageContainer"></div>
-        <div
+        <div className="image"
           style={{
             backgroundImage: `url(${photoSrc})`,
             backgroundPosition: "center",
