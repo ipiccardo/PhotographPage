@@ -15,7 +15,7 @@ const Maradona = ({ handleClick, setData }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 2000);
+    }, 3000);
   });
   
   useEffect(() => {

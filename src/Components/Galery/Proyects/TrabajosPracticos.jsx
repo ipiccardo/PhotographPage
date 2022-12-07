@@ -23,7 +23,7 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowFooter(true);
-    }, 2500);
+    }, 3000);
   });
 
   return (
