@@ -85,6 +85,13 @@ export const Galery = () => { */
   }
 }
 
+@media (max-width: 600px) {
+  .container-description {
+    bottom: 20px;
+  }
+}
+
+
 .galery-item-background {
   width: 100vw;
   height: calc(100vh - 55px);

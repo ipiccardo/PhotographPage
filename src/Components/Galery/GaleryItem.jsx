@@ -74,7 +74,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
           </IconButton>
         </div>
       </div>
-      <div className="container-description" style={{bottom: '20px'}}>
+      <div className="container-description">
         {
           data.map(({description, id}) => {
             return (
