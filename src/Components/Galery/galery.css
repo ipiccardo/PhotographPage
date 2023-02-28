@@ -87,7 +87,7 @@ export const Galery = () => { */
 
 @media (max-width: 600px) {
   .container-description {
-    bottom: 20px;
+    bottom: 15px;
   }
 }
 
