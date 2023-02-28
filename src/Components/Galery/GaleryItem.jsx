@@ -46,7 +46,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-        <div style={{ position: "absolute", left: "85%", top: 0 }}>
+        <div className="z-index-200" style={{ position: "absolute", left: "85%", top: 0 }}>
           <IconButton onClick={handleClose}>
             {
               <CloseIcon
@@ -55,7 +55,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
             }
           </IconButton>
         </div>
-        <div style={{ position: "absolute", right: "85%", top: "50%" }}>
+        <div className="z-index-200" style={{ position: "absolute", right: "85%", top: "50%" }}>
           <IconButton onClick={PreviousPhoto}>
             {
               <ChevronLeftIcon
@@ -64,7 +64,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
             }
           </IconButton>
         </div>
-        <div style={{ position: "absolute", left: "85%", top: "50%" }}>
+        <div className="z-index-200" style={{ position: "absolute", left: "85%", top: "50%", zIndex: 'z-index: 200' }}>
           <IconButton onClick={nextPhoto}>
             {
               <ChevronRightIcon

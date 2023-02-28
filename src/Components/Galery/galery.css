@@ -87,7 +87,7 @@ export const Galery = () => { */
 
 @media (max-width: 600px) {
   .container-description {
-    bottom: 15px;
+    bottom: 20px;
   }
 }
 
@@ -119,3 +119,7 @@ export const Galery = () => { */
     max-height: 500px;
   }
 } */
+
+.z-index-200 {
+  z-index: 200
+}
