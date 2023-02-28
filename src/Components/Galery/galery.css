@@ -87,11 +87,11 @@ export const Galery = () => { */
 
 .galery-item-background {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 56px);
   position: absolute;
   background: black;
-  margin-top: -100px;
   padding-bottom: 560px;
+  top: 55px;
 }
 
 .container-description {
@@ -106,15 +106,8 @@ export const Galery = () => { */
   margin-right: 20px;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .image {
-    max-height: 400px;
+    max-height: 500px;
   }
-}
-
-@media (max-width: 400px) {
-  .image {
-    max-height: 200px;
-    margin-top: 30px !important;
-  }
-}
+} */

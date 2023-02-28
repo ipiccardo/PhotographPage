@@ -43,7 +43,6 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
             height: "75vh",
             width: "100vw",
             backgroundRepeat: "no-repeat",
-            marginTop: '-30px',
           }}
         ></div>
         <div style={{ position: "absolute", left: "85%", top: 0 }}>
