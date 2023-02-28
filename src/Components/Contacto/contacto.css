@@ -20,7 +20,7 @@ a {
 
 .social-media-container svg:hover {
   color: lightgray;
-}
+  -webkit-transition: all .2s ease-out; -moz-transition: all .2s ease-out; -o-transition: all .2s ease-out; transition: all .2s ease-out; }
 
 .social-media-div {
   display: flex;
