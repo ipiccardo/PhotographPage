@@ -87,7 +87,7 @@ export const Galery = () => { */
 
 .galery-item-background {
   width: 100vw;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 55px);
   position: absolute;
   background: black;
   padding-bottom: 560px;
