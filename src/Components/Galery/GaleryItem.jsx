@@ -1,4 +1,3 @@
-import React from "react";
 import "./galery.css";
 import { IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -8,6 +7,7 @@ import { useEffect } from "react";
 // import Footer from "../Footer/Footer";
 
 export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data}) => {
+
   const handleClose = () => {
     setShowImage(false);
   };
@@ -29,6 +29,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
     setPhotoId((photoId) => parseInt(photoId));
   }, [setPhotoId]);
 
+  
   return (
     <>
         <div></div>
@@ -73,7 +74,7 @@ export const GaleryItem = ({ photoSrc, setShowImage, setPhotoId, photoId, data})
           </IconButton>
         </div>
       </div>
-      <div className="container-description">
+      <div className="container-description" style={{bottom: '20px'}}>
         {
           data.map(({description, id}) => {
             return (
