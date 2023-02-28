@@ -99,6 +99,7 @@ export const Galery = () => { */
   color: white;
   background: black;
   width: 100%;
+  opacity: 0.5;
 }
 
 .description {
