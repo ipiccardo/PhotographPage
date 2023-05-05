@@ -22,15 +22,8 @@ export const HomeScreen = () => {
   const [showLibroDeArtista, setShowLibroDeArtista] = useState(false);
   const [showArchivo, setShowArchivo] = useState(false);
 
-  // const handleButtonClick = (stateFunction) => {
-  //   setShowFotoreportaje(false);
-  //   setTrabajosPracticos(false);
-  //   setLibroDeArtista(false);
-  //   setArchivo(false);
-  //   stateFunction(true);
-  // };
-
   const handleButtonClick = (buttonName) => {
+    setShowImage(false);
     switch (buttonName) {
       case "fotorreportaje":
         setShowFotoReportaje(true);

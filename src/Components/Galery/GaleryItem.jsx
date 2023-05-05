@@ -8,10 +8,10 @@ import { useEffect } from "react";
 
 export const GaleryItem = ({
   photoSrc,
-  setShowImage,
   setPhotoId,
   photoId,
   data,
+  setShowImage,
 }) => {
   const handleClose = () => {
     setShowImage(false);
@@ -92,6 +92,7 @@ export const GaleryItem = ({
           </IconButton>
         </div>
       </div>
+
       <div className="container-description">
         {data.map(({ description, id }) => {
           return <p className="description">{id === photoId && description}</p>;

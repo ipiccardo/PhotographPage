@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   color: grey;
   background-color: black;
+  border-top: 2px solid white;
 }
 
 a {
@@ -60,4 +61,5 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
