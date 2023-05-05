@@ -4,12 +4,10 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { useEffect } from "react";
 import "../galery.css";
-import Footer from "../../Footer/Footer";
 import Spinner from "../../Spinner/Spinner";
 
 export const FotoReportaje = ({ handleClick, setData }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     setData(itemDataFour);
@@ -19,11 +17,11 @@ export const FotoReportaje = ({ handleClick, setData }) => {
     }, 1000);
   }, [setData]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowFooter(true);
-    }, 3000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowFooter(true);
+  //   }, 3000);
+  // });
 
   return (
     <>
@@ -40,8 +38,8 @@ export const FotoReportaje = ({ handleClick, setData }) => {
               component="div"
               sx={{ backgroundColor: "black", color: "white" }}
             >
-              Trabajo colaborativo junto a: Mariel Berlingeri, Jimena
-              Avalos, Lucas Mangi, Federico Holc.
+              Trabajo colaborativo junto a: Mariel Berlingeri, Jimena Avalos,
+              Lucas Mangi, Federico Holc.
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
@@ -63,7 +61,7 @@ export const FotoReportaje = ({ handleClick, setData }) => {
           )}
         </ImageList>
       </div>
-      {showFooter && <Footer />}
+      {/* {showFooter && <Footer />} */}
     </>
   );
 };

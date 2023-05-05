@@ -1,36 +1,46 @@
 .social-media-container {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   flex-wrap: wrap;
-  margin-bottom: 200px;
+  color: grey;
+  background-color: black;
 }
 
 a {
-  color: black;
+  color: grey;
+}
+
+[role="img"] {
+  height: 0.5em;
 }
 
 .social-media-container span {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .social-media-container svg:hover {
   color: lightgray;
-  -webkit-transition: all .2s ease-out; -moz-transition: all .2s ease-out; -o-transition: all .2s ease-out; transition: all .2s ease-out; }
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
 
 .social-media-div {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
-  flex-direction: column;
-  width: 300px;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
+  align-items: baseline;
 }
 
 .social-media-links {
@@ -43,8 +53,11 @@ a {
   }
 }
 
-@media (min-width: 1000px) {
-  .social-media-container {
-    margin-bottom: 300px;
-  }
+.maxWidth {
+  max-width: 1200px;
+  width: 90%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

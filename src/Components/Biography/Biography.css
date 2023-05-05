@@ -2,15 +2,17 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap-reverse;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: -50px;
   padding: 16px;
+  gap: 3rem;
 }
 
 .biography-text {
   width: 30rem;
   text-align: justify;
   margin-top: -50px;
+  max-width: 650px;
 }
 
 .biography-text h2 {
@@ -21,12 +23,13 @@
   height: 100vh;
   width: 50vw;
   /* background-image: url(https://drive.google.com/uc?export=view&id=1y0aU-UnomBebs-k_Xh5UB2Ci8R63OiPy); */
-  background-image: url('../../../public/assets/biografia/TP_PORTAFOLIO_ALEXIS\ FERNANDEZ_copia-16.jpg');
+  background-image: url("../../../public/assets/biografia/TP_PORTAFOLIO_ALEXIS\ FERNANDEZ_copia-16.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: -50px;
+  /* margin-top: -20px; */
   /* position: absolute; */
   background-position: center;
+  max-width: 650px;
 }
 
 @media (max-width: 1050px) {
@@ -38,11 +41,9 @@
   }
   .biography-text {
     width: 100vw;
-    margin-top: 0px;
+    margin-top: 50px;
   }
 }
-
-
 
 .biography-title-box {
   position: absolute;

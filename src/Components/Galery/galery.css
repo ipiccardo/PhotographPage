@@ -56,6 +56,10 @@ export const Galery = () => { */
   margin-bottom: 52px;
 }
 
+.galeryContainer ul {
+  width: 100%;
+}
+
 .listContainer {
   list-style: none;
   display: flex;
@@ -92,22 +96,20 @@ export const Galery = () => { */
   }
 }
 
-
 .galery-item-background {
   width: 100vw;
-  height: calc(100vh - 55px);
-  position: absolute;
   background: black;
-  padding-bottom: 560px;
-  top: 55px;
 }
 
 .container-description {
-  position: absolute;
   color: white;
   background: black;
   width: 100%;
   opacity: 0.5;
+  max-width: 1200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description {
@@ -115,12 +117,12 @@ export const Galery = () => { */
   margin-right: 20px;
 }
 
-/* @media (max-width: 500px) {
+@media (max-width: 1200px) {
   .image {
-    max-height: 500px;
+    background-size: cover !important;
   }
-} */
+}
 
 .z-index-200 {
-  z-index: 200
+  z-index: 200;
 }

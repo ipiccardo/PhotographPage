@@ -103,26 +103,46 @@ const HamburgerMenu = ({ open, setOpen }) => {
           }}
         >
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{textDecoration: 'none'}} to={"/HomeScreen"}>Home</NavLink>
+            <NavLink style={{ textDecoration: "none" }} to={"/HomeScreen"}>
+              Home
+            </NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
-          <NavLink style={{textDecoration: 'none'}} to={"/Biography"}>Biografía</NavLink>
-            </ListItemButton>
-            <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{textDecoration: 'none'}} to={"/FotoReportaje"}>Fotorreportaje</NavLink>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={{ pathname: "/HomeScreen", hash: "#seccion-biography" }}
+            >
+              Biografía
+            </NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{textDecoration: 'none'}} to={"/TrabajosPracticos"}>Trabajos Prácticos</NavLink>
+            <NavLink style={{ textDecoration: "none" }} to={"/FotoReportaje"}>
+              Fotorreportaje
+            </NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{textDecoration: 'none'}} to={"/LibrodeArtista"}>Libro de Artista</NavLink>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={"/TrabajosPracticos"}
+            >
+              Trabajos Prácticos
+            </NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{textDecoration: 'none'}} to={"/Galery"}>Archivo</NavLink>
+            <NavLink style={{ textDecoration: "none" }} to={"/LibrodeArtista"}>
+              Libro de Artista
+            </NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{textDecoration: 'none'}} to={"/Contacto"}>Contacto</NavLink>
+            <NavLink style={{ textDecoration: "none" }} to={"/Galery"}>
+              Archivo
+            </NavLink>
           </ListItemButton>
+          {/* <ListItemButton onClick={handleDrawerClose}>
+            <NavLink style={{ textDecoration: "none" }} to={"/Contacto"}>
+              Contacto
+            </NavLink>
+          </ListItemButton> */}
         </List>
         <Divider />
       </Drawer>
