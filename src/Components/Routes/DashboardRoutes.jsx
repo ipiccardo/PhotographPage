@@ -31,7 +31,6 @@ export const DashBoardRoutes = () => {
       <Routes>
         <Route path="/HomeScreen" element={<HomeScreen />} />
         <Route path="/Galery" element={<Galery />} />
-        <Route path="/HomeScreen#seccion-biography" element={<HomeScreen />} />
         <Route
           path="/FotoReportaje"
           element={

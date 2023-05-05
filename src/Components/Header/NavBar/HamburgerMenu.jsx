@@ -116,6 +116,14 @@ const HamburgerMenu = ({ open, setOpen }) => {
             </NavLink>
           </ListItemButton>
           <ListItemButton onClick={handleDrawerClose}>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={{ pathname: "/HomeScreen", hash: "#seccion-projects" }}
+            >
+              Galeria
+            </NavLink>
+          </ListItemButton>
+          {/* <ListItemButton onClick={handleDrawerClose}>
             <NavLink style={{ textDecoration: "none" }} to={"/FotoReportaje"}>
               Fotorreportaje
             </NavLink>
@@ -132,7 +140,7 @@ const HamburgerMenu = ({ open, setOpen }) => {
             <NavLink style={{ textDecoration: "none" }} to={"/LibrodeArtista"}>
               Libro de Artista
             </NavLink>
-          </ListItemButton>
+          </ListItemButton> */}
           <ListItemButton onClick={handleDrawerClose}>
             <NavLink style={{ textDecoration: "none" }} to={"/Galery"}>
               Archivo
@@ -143,6 +151,14 @@ const HamburgerMenu = ({ open, setOpen }) => {
               Contacto
             </NavLink>
           </ListItemButton> */}
+          <ListItemButton onClick={handleDrawerClose}>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={{ pathname: "/HomeScreen", hash: "#seccion-contact" }}
+            >
+              Contacto
+            </NavLink>
+          </ListItemButton>
         </List>
         <Divider />
       </Drawer>

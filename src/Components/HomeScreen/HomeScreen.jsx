@@ -2,7 +2,7 @@ import React from "react";
 import "./homeScreen.css";
 import Biography from "../Biography/Biography";
 import FotoReportaje from "../Galery/Proyects/FotoReportaje";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import GaleryItem from "../Galery/GaleryItem";
 import Footer from "../Footer/Footer";
 import Contacto from "../Contacto/Contacto";
@@ -10,6 +10,7 @@ import TrabajosPracticos from "../Galery/Proyects/TrabajosPracticos";
 import LibroDeArtista from "../Galery/Proyects/LibrodeArtista";
 import { Galery } from "../Galery/Galery";
 import { Button } from "@mui/material";
+import { useLocation } from "react-router-dom";
 
 export const HomeScreen = () => {
   const [showImage, setShowImage] = useState(false);
@@ -21,6 +22,25 @@ export const HomeScreen = () => {
   const [showTrabajosPracticos, setShowTrabajosPracticos] = useState(false);
   const [showLibroDeArtista, setShowLibroDeArtista] = useState(false);
   const [showArchivo, setShowArchivo] = useState(false);
+
+  const location = useLocation();
+  const bioSectionRef = useRef(null);
+  const projectsSectionRef = useRef(null);
+  const contactSectionRef = useRef(null);
+
+  useEffect(() => {
+    if (location.hash === "#seccion-biography" && bioSectionRef.current) {
+      bioSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (location.hash === "#seccion-projects" && projectsSectionRef.current) {
+      projectsSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (location.hash === "#seccion-contact" && contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   const handleButtonClick = (buttonName) => {
     setShowImage(false);
@@ -84,10 +104,15 @@ export const HomeScreen = () => {
         className="biogrphy-container"
         id="seccion-biography"
         style={{ position: "relative", marginTop: "100px" }}
+        ref={bioSectionRef}
       >
         <Biography />
       </div>
-      <div className="GaleryContainer">
+      <div
+        className="GaleryContainer"
+        id="seccion-projects"
+        ref={projectsSectionRef}
+      >
         <div className="buttonContainer">
           <Button
             sx={{ backgroundColor: "black" }}
@@ -113,14 +138,6 @@ export const HomeScreen = () => {
           >
             Libro de Artista
           </Button>
-          {/* <Button
-            sx={{ backgroundColor: "black" }}
-            variant="contained"
-            name="Futsal"
-            onClick={() => handleButtonClick("archivo")}
-          >
-            Archivo
-          </Button> */}
         </div>
         {!showImage ? (
           showFotoReportaje ? (
@@ -176,7 +193,7 @@ export const HomeScreen = () => {
           />
         )}
       </div>
-      <div>
+      <div id="seccion-contact" ref={contactSectionRef}>
         <Contacto />
       </div>
 
