@@ -103,7 +103,7 @@ export const HomeScreen = () => {
       <div
         className="biogrphy-container"
         id="seccion-biography"
-        style={{ position: "relative", marginTop: "100px" }}
+        style={{ position: "relative", marginTop: "56px" }}
         ref={bioSectionRef}
       >
         <Biography />
