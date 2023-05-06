@@ -17,6 +17,7 @@ export const HomeScreen = () => {
   const [photoSrc, setPhotoSrc] = useState("");
   const [photoId, setPhotoId] = useState();
   const [data, setData] = useState([]);
+  const [selectedButton, setSelectedButton] = useState("fotorreportaje");
 
   const [showFotoReportaje, setShowFotoReportaje] = useState(true);
   const [showTrabajosPracticos, setShowTrabajosPracticos] = useState(false);
@@ -50,18 +51,21 @@ export const HomeScreen = () => {
         setShowTrabajosPracticos(false);
         setShowLibroDeArtista(false);
         setShowArchivo(false);
+        setSelectedButton("fotorreportaje");
         break;
       case "trabajosPracticos":
         setShowFotoReportaje(false);
         setShowTrabajosPracticos(true);
         setShowLibroDeArtista(false);
         setShowArchivo(false);
+        setSelectedButton("trabajosPracticos");
         break;
       case "libroDeArtista":
         setShowFotoReportaje(false);
         setShowTrabajosPracticos(false);
         setShowLibroDeArtista(true);
         setShowArchivo(false);
+        setSelectedButton("libroDeArtista");
         break;
       case "archivo":
         setShowFotoReportaje(false);
@@ -115,7 +119,10 @@ export const HomeScreen = () => {
       >
         <div className="buttonContainer">
           <Button
-            sx={{ backgroundColor: "black" }}
+            sx={{
+              backgroundColor:
+                selectedButton === "fotorreportaje" ? "contained" : "black",
+            }}
             variant="contained"
             name="Futsal"
             onClick={() => handleButtonClick("fotorreportaje")}
@@ -123,7 +130,10 @@ export const HomeScreen = () => {
             Fotorreportaje
           </Button>
           <Button
-            sx={{ backgroundColor: "black" }}
+            sx={{
+              backgroundColor:
+                selectedButton === "trabajosPracticos" ? "contained" : "black",
+            }}
             variant="contained"
             name="Futsal"
             onClick={() => handleButtonClick("trabajosPracticos")}
@@ -131,7 +141,10 @@ export const HomeScreen = () => {
             Trabajos Prácticos
           </Button>
           <Button
-            sx={{ backgroundColor: "black" }}
+            sx={{
+              backgroundColor:
+                selectedButton === "libroDeArtista" ? "contained" : "black",
+            }}
             variant="contained"
             name="Futsal"
             onClick={() => handleButtonClick("libroDeArtista")}

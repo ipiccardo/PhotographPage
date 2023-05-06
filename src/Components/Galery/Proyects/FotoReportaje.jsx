@@ -11,10 +11,10 @@ export const FotoReportaje = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemDataFour);
-    setIsLoaded(false);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 1000);
+    setIsLoaded(true);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 1000);
   }, [setData]);
 
   // useEffect(() => {
