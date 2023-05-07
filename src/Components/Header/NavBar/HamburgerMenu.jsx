@@ -123,34 +123,11 @@ const HamburgerMenu = ({ open, setOpen }) => {
               Galeria
             </NavLink>
           </ListItemButton>
-          {/* <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{ textDecoration: "none" }} to={"/FotoReportaje"}>
-              Fotorreportaje
-            </NavLink>
-          </ListItemButton>
-          <ListItemButton onClick={handleDrawerClose}>
-            <NavLink
-              style={{ textDecoration: "none" }}
-              to={"/TrabajosPracticos"}
-            >
-              Trabajos Prácticos
-            </NavLink>
-          </ListItemButton>
-          <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{ textDecoration: "none" }} to={"/LibrodeArtista"}>
-              Libro de Artista
-            </NavLink>
-          </ListItemButton> */}
           <ListItemButton onClick={handleDrawerClose}>
             <NavLink style={{ textDecoration: "none" }} to={"/Galery"}>
               Archivo
             </NavLink>
           </ListItemButton>
-          {/* <ListItemButton onClick={handleDrawerClose}>
-            <NavLink style={{ textDecoration: "none" }} to={"/Contacto"}>
-              Contacto
-            </NavLink>
-          </ListItemButton> */}
           <ListItemButton onClick={handleDrawerClose}>
             <NavLink
               style={{ textDecoration: "none" }}

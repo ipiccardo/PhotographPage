@@ -16,25 +16,27 @@ const Header = () => {
   };
   return (
     <>
-      <Box style={{ zIndex: "1000 !important" }} sx={{ flexGrow: 1}}>
+      <Box style={{ zIndex: "1000 !important" }} sx={{ flexGrow: 1 }}>
         <AppBar position="fixed" open={open} sx={{ backgroundColor: "black" }}>
           <div className="navBar-container">
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2, ...(open && { display: "none" }) }}
+            <Toolbar>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2, ...(open && { display: "none" }) }}
               >
-              <MenuIcon />
-            </IconButton>
-            {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                <MenuIcon />
+              </IconButton>
+              {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Portfolio
             </Typography> */}
-            <span className="nav-item nav-link text-info">ALEXIS FERNÁNDEZ</span>
-          </Toolbar>
-            </div>
+              <span className="nav-item nav-link text-info">
+                ALEXIS FERNÁNDEZ
+              </span>
+            </Toolbar>
+          </div>
         </AppBar>
         <HamburgerMenu open={open} setOpen={setOpen} />
       </Box>

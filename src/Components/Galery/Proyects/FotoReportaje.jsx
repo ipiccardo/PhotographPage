@@ -17,12 +17,6 @@ export const FotoReportaje = ({ handleClick, setData }) => {
     // }, 1000);
   }, [setData]);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowFooter(true);
-  //   }, 3000);
-  // });
-
   return (
     <>
       <div className="galeryContainer">

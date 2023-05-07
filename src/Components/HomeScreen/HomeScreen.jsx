@@ -32,14 +32,18 @@ export const HomeScreen = () => {
   useEffect(() => {
     if (location.hash === "#seccion-biography" && bioSectionRef.current) {
       bioSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-
-    if (location.hash === "#seccion-projects" && projectsSectionRef.current) {
+    } else if (
+      location.hash === "#seccion-projects" &&
+      projectsSectionRef.current
+    ) {
       projectsSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-
-    if (location.hash === "#seccion-contact" && contactSectionRef.current) {
+    } else if (
+      location.hash === "#seccion-contact" &&
+      contactSectionRef.current
+    ) {
       contactSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
@@ -206,10 +210,10 @@ export const HomeScreen = () => {
           />
         )}
       </div>
+
       <div id="seccion-contact" ref={contactSectionRef}>
         <Contacto />
       </div>
-
       <Footer />
     </>
   );
