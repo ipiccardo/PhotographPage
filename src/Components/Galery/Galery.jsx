@@ -57,7 +57,7 @@ export const Galery = () => {
             setData={setData}
           />
         );
-        case "Futsal":
+      case "Futsal":
         return (
           <Futsal
             handleClick={handleClick}
@@ -68,39 +68,6 @@ export const Galery = () => {
             setData={setData}
           />
         );
-        // case "FotoReportaje":
-        // return (
-        //   <FotoReportaje
-        //     handleClick={handleClick}
-        //     showImage={showImage}
-        //     setShowImage={setShowImage}
-        //     setPhotoSrc={setPhotoSrc}
-        //     photoId={photoId}
-        //     setData={setData}
-        //   />
-        // );
-        // case "LibroDeArtista":
-        //   return (
-        //     <LibroDeArtista
-        //       handleClick={handleClick}
-        //       showImage={showImage}
-        //       setShowImage={setShowImage}
-        //       setPhotoSrc={setPhotoSrc}
-        //       photoId={photoId}
-        //       setData={setData}
-        //     />
-        //   );
-        //   case "TrabajosPracticos":
-        //   return (
-        //     <TrabajosPracticos
-        //       handleClick={handleClick}
-        //       showImage={showImage}
-        //       setShowImage={setShowImage}
-        //       setPhotoSrc={setPhotoSrc}
-        //       photoId={photoId}
-        //       setData={setData}
-        //     />
-        //   );
       default:
         return;
     }
@@ -113,7 +80,7 @@ export const Galery = () => {
           <ProyectList
             handleProyectChange={handleProyectChange}
             proyect={proyectName}
-            />
+          />
           {proyect(proyectName)}
         </div>
       ) : (

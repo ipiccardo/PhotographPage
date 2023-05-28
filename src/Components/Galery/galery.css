@@ -37,12 +37,6 @@ export const Galery = () => { */
 }
 
 .imageContainer {
-  /* position: absolute;
-  background: transparent;
-  height: 100vh;
-  width: 100%;
-  z-index: -100; */
-  /* left: calc(50vw - 372.5px); */
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -83,14 +77,6 @@ export const Galery = () => { */
   margin-top: 2px;
 }
 
-/* @media (max-width: 1200px) {
-  .singleImage {
-   height: 400px;
-  width: 400px
-  }
-}
-
-*/
 @media (max-width: 800px) {
   .singleImage {
     width: 95%;
@@ -102,6 +88,9 @@ export const Galery = () => { */
   .container-description {
     bottom: 20px;
     z-index: 100;
+  }
+  .image {
+    max-height: 500px;
   }
 }
 
@@ -118,7 +107,9 @@ export const Galery = () => { */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  position: relative;
+  top: 0;
 }
 
 .description {
@@ -128,10 +119,22 @@ export const Galery = () => { */
 
 @media (max-width: 1200px) {
   .image {
-    background-size: cover !important;
+    background-size: contain !important;
   }
 }
 
 .z-index-200 {
   z-index: 200;
+}
+
+/* TRANSICIONES */
+
+.galery-item-container {
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+}
+
+.galery-item-container.transitioning {
+  transform: scale(0.9);
+  opacity: 0;
 }
