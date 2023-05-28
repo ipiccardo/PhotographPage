@@ -9,19 +9,12 @@ import Footer from "../../Footer/Footer";
 
 const TresPicos = ({ handleClick, setData }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     setData(itemData);
     setIsLoaded(false);
     setIsLoaded(true);
   }, [setData]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowFooter(true);
-    }, 3000);
-  });
 
   return (
     <>
@@ -54,7 +47,7 @@ const TresPicos = ({ handleClick, setData }) => {
           )}
         </ImageList>
       </div>
-      {showFooter && <Footer />}
+      <Footer />
     </>
   );
 };

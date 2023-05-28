@@ -9,13 +9,12 @@ import "../galery.css";
 
 const Maradona = ({ handleClick, setData }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showFooter, setShowFooter] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowFooter(true);
-    }, 3000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowFooter(true);
+  //   }, 3000);
+  // });
 
   useEffect(() => {
     setData(itemDataTwo);
@@ -54,7 +53,7 @@ const Maradona = ({ handleClick, setData }) => {
           )}
         </ImageList>
       </div>
-      {showFooter && <Footer />}
+      <Footer />
     </>
   );
 };

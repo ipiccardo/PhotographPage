@@ -10,14 +10,6 @@ import Footer from "../../Footer/Footer";
 const Futsal = ({ handleClick, setData }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const [showFooter, setShowFooter] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowFooter(true);
-    }, 3000);
-  });
-
   useEffect(() => {
     setData(itemDataThree);
     setIsLoaded(false);
@@ -55,7 +47,7 @@ const Futsal = ({ handleClick, setData }) => {
           )}
         </ImageList>
       </div>
-      {showFooter && <Footer />}
+      <Footer />
     </>
   );
 };
