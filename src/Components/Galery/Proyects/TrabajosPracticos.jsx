@@ -14,12 +14,6 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
     setIsLoaded(true);
   }, [setData]);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowFooter(true);
-  //   }, 3000);
-  // });
-
   return (
     <>
       <div className="galeryContainer">
