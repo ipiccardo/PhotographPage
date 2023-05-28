@@ -29,7 +29,7 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
               component="div"
               sx={{ backgroundColor: "black", color: "white" }}
             >
-              Trabajos Practicos
+              Trabajos
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (

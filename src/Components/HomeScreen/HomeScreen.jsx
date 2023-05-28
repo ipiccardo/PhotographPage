@@ -142,7 +142,7 @@ export const HomeScreen = () => {
             name="Futsal"
             onClick={() => handleButtonClick("trabajosPracticos")}
           >
-            Trabajos Prácticos
+            Trabajos
           </Button>
           <Button
             sx={{
