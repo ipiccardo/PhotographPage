@@ -130,7 +130,7 @@ export const Galery = () => { */
 /* TRANSICIONES */
 
 .galery-item-container {
-  transition: transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, transform-origin 0.5s ease;
   transform-origin: center center;
 }
 

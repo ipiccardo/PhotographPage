@@ -20,22 +20,18 @@ export const GaleryItem = ({
   };
 
   const nextPhoto = () => {
-    setTimeout(() => {
-      photoId !== data.length
-        ? setPhotoId((photoId) => parseInt(photoId) + 1)
-        : setPhotoId(1);
-      setIsTransitioning(false);
-    }, 300);
+    photoId !== data.length
+      ? setPhotoId((photoId) => parseInt(photoId) + 1)
+      : setPhotoId(1);
+    setIsTransitioning(false);
   };
 
   const previousPhoto = () => {
     setIsTransitioning(true);
-    setTimeout(() => {
-      photoId !== 1
-        ? setPhotoId((photoId) => parseInt(photoId) - 1)
-        : setPhotoId(data.length);
-      setIsTransitioning(false);
-    }, 300);
+    photoId !== 1
+      ? setPhotoId((photoId) => parseInt(photoId) - 1)
+      : setPhotoId(data.length);
+    setIsTransitioning(false);
   };
 
   const swipeHandlers = useSwipeable({
