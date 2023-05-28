@@ -39,8 +39,6 @@ export const GaleryItem = ({
     }, 300);
   };
 
-  console.log(isTransitioning);
-
   const swipeHandlers = useSwipeable({
     onSwipedLeft: nextPhoto,
     onSwipedRight: previousPhoto,
