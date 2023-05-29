@@ -57,7 +57,7 @@ export const Galery = () => { */
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   margin-top: 56px;
-  min-height: 500px;
+  min-height: 800px;
   max-height: 3500px;
 }
 
