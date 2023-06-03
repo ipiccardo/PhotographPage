@@ -65,8 +65,9 @@ export const GaleryItem = ({
               backgroundPosition: "center",
               backgroundSize: "contain",
               height: "80vh",
-              width: "100vw",
+              width: "95vw",
               backgroundRepeat: "no-repeat",
+              margin: "0 auto",
             }}
           ></div>
         </div>

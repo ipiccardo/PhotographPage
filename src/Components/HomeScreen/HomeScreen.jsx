@@ -98,64 +98,72 @@ export const HomeScreen = () => {
 
   return (
     <>
-      <div className="hero"></div>
-      <div className="title-box">
-        <h1>Alexis Fernández</h1>
-        <p>
-          «No haces fotografía sólo con la cámara. La haces con todas las
-          imágenes que has visto, con todos los libros que has leído, con toda
-          la música que has escuchado, y con toda la gente a la que has amado»
-          Ansel Adams
-        </p>
-      </div>
-      <div
-        className="biogrphy-container"
-        id="seccion-biography"
-        style={{ position: "relative", marginTop: "56px" }}
-        ref={bioSectionRef}
-      >
-        <Biography />
-      </div>
+      {!showImage && <div className="hero"></div>}
+      {!showImage && (
+        <div className="title-box">
+          <h1>Alexis Fernández</h1>
+          <p>
+            «No haces fotografía sólo con la cámara. La haces con todas las
+            imágenes que has visto, con todos los libros que has leído, con toda
+            la música que has escuchado, y con toda la gente a la que has amado»
+            Ansel Adams
+          </p>
+        </div>
+      )}
+      {!showImage && (
+        <div
+          className="biogrphy-container"
+          id="seccion-biography"
+          style={{ position: "relative", marginTop: "56px" }}
+          ref={bioSectionRef}
+        >
+          <Biography />
+        </div>
+      )}
       <div
         className="GaleryContainer"
         id="seccion-projects"
         ref={projectsSectionRef}
       >
-        <div className="buttonContainer">
-          <Button
-            sx={{
-              backgroundColor:
-                selectedButton === "fotorreportaje" ? "contained" : "black",
-            }}
-            variant="contained"
-            name="Futsal"
-            onClick={() => handleButtonClick("fotorreportaje")}
-          >
-            Fotorreportaje
-          </Button>
-          <Button
-            sx={{
-              backgroundColor:
-                selectedButton === "trabajosPracticos" ? "contained" : "black",
-            }}
-            variant="contained"
-            name="Futsal"
-            onClick={() => handleButtonClick("trabajosPracticos")}
-          >
-            Trabajos
-          </Button>
-          <Button
-            sx={{
-              backgroundColor:
-                selectedButton === "libroDeArtista" ? "contained" : "black",
-            }}
-            variant="contained"
-            name="Futsal"
-            onClick={() => handleButtonClick("libroDeArtista")}
-          >
-            Libro de Artista
-          </Button>
-        </div>
+        {!showImage && (
+          <div className="buttonContainer">
+            <Button
+              sx={{
+                backgroundColor:
+                  selectedButton === "fotorreportaje" ? "contained" : "black",
+              }}
+              variant="contained"
+              name="Futsal"
+              onClick={() => handleButtonClick("fotorreportaje")}
+            >
+              Fotorreportaje
+            </Button>
+            <Button
+              sx={{
+                backgroundColor:
+                  selectedButton === "trabajosPracticos"
+                    ? "contained"
+                    : "black",
+              }}
+              variant="contained"
+              name="Futsal"
+              onClick={() => handleButtonClick("trabajosPracticos")}
+            >
+              Trabajos
+            </Button>
+            <Button
+              sx={{
+                backgroundColor:
+                  selectedButton === "libroDeArtista" ? "contained" : "black",
+              }}
+              variant="contained"
+              name="Futsal"
+              onClick={() => handleButtonClick("libroDeArtista")}
+            >
+              Libro de Artista
+            </Button>
+          </div>
+        )}
         {!showImage ? (
           showFotoReportaje ? (
             <FotoReportaje
@@ -210,11 +218,14 @@ export const HomeScreen = () => {
           />
         )}
       </div>
-
-      <div id="seccion-contact" ref={contactSectionRef}>
-        <Contacto />
-      </div>
-      <Footer />
+      {!showImage && (
+        <>
+          <div id="seccion-contact" ref={contactSectionRef}>
+            <Contacto />
+          </div>
+          <Footer />
+        </>
+      )}
     </>
   );
 };
