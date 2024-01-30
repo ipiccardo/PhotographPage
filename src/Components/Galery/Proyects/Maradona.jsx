@@ -18,8 +18,9 @@ const Maradona = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemDataTwo);
-    setIsLoaded(false);
-    setIsLoaded(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
   }, [setData]);
 
   return (
@@ -35,7 +36,9 @@ const Maradona = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
-            <Spinner />
+            <div className="spinnerContainer">
+              <Spinner />
+            </div>
           ) : (
             itemDataTwo.map((item) => (
               <ImageListItem key={item.id}>

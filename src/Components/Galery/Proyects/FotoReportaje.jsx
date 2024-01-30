@@ -11,10 +11,10 @@ export const FotoReportaje = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemDataFour);
-    setIsLoaded(true);
-    // setTimeout(() => {
-    //   setIsLoaded(true);
-    // }, 1000);
+    // setIsLoaded(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
   }, [setData]);
 
   return (
@@ -37,7 +37,9 @@ export const FotoReportaje = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
-            <Spinner />
+            <div className="spinnerContainer">
+              <Spinner />
+            </div>
           ) : (
             itemDataFour.map((item) => (
               <ImageListItem key={item.img}>

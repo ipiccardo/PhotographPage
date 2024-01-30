@@ -11,7 +11,9 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemDataFive);
-    setIsLoaded(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
   }, [setData]);
 
   // useEffect(() => {
@@ -33,7 +35,9 @@ export const LibroDeArtista = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
-            <Spinner />
+            <div className="spinnerContainer">
+              <Spinner />
+            </div>
           ) : (
             itemDataFive.map((item) => (
               <ImageListItem key={item.id}>

@@ -12,8 +12,11 @@ const Futsal = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemDataThree);
-    setIsLoaded(false);
-    setIsLoaded(true);
+
+    // setIsLoaded(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
   }, [setData]);
 
   return (
@@ -29,7 +32,9 @@ const Futsal = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
-            <Spinner />
+            <div className="spinnerContainer">
+              <Spinner />
+            </div>
           ) : (
             itemDataThree.map((item) => (
               <ImageListItem key={item.id}>

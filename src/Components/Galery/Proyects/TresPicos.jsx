@@ -12,8 +12,9 @@ const TresPicos = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemData);
-    setIsLoaded(false);
-    setIsLoaded(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
   }, [setData]);
 
   return (
@@ -29,7 +30,9 @@ const TresPicos = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
-            <Spinner />
+            <div className="spinnerContainer">
+              <Spinner />
+            </div>
           ) : (
             itemData.map((item) => (
               <ImageListItem key={item.id}>

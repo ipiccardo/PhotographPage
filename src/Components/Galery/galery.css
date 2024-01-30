@@ -151,3 +151,13 @@ export const Galery = () => { */
   /* transform: scale(0.9); */
   opacity: 0;
 }
+
+.spinnerContainer {
+  background: grey;
+  width: 100%;
+  grid-template-columns: 2;
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+  overflow: hidden;
+  height: 100%;
+}

@@ -11,7 +11,9 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
 
   useEffect(() => {
     setData(itemDataSix);
-    setIsLoaded(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
   }, [setData]);
 
   return (
@@ -27,7 +29,9 @@ export const TrabajosPracticos = ({ handleClick, setData }) => {
             </ListSubheader>
           </ImageListItem>
           {!isLoaded ? (
-            <Spinner />
+            <div className="spinnerContainer">
+              <Spinner />
+            </div>
           ) : (
             itemDataSix.map((item) => (
               <ImageListItem key={item.img}>
