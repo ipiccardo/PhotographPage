@@ -1,6 +1,6 @@
 # Captivating Photography Portfolio
 
-Welcome to my photography portfolio, a captivating showcase meticulously crafted with React.js. Immerse yourself in a seamless journey through my visual storytelling, where each image is a chapter in my passion for photography.
+Welcome to my photography portfolio, a captivating showcase meticulously crafted with React.js.
 
 ## Features:
 
