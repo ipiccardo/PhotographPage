@@ -2,7 +2,7 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect, useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
@@ -10,22 +10,11 @@ import Footer from "../../Footer/Footer";
 const TresPicos = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setData([]);
-  }, [handleClick, setData]);
-
-  useEffect(() => {
     setData(itemData);
-    // setTimeout(() => {
-    //   setIsLoaded(true);
-    // }, 1500);
+    setIsLoaded(true);
   }, [setData]);
-
-  useEffect(() => {
-    if (data.length > 8) {
-      setIsLoaded(true);
-    }
-  }, [data]);
 
   return (
     <>

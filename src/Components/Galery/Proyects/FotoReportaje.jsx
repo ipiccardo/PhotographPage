@@ -2,30 +2,18 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 
 export const FotoReportaje = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setData([]);
-  }, [handleClick, setData]);
-
-  useEffect(() => {
     setData(itemDataFour);
-    // setIsLoaded(true);
-    // setTimeout(() => {
-    //   setIsLoaded(true);
-    // }, 1500);
+    setIsLoaded(true);
   }, [setData]);
-
-  useEffect(() => {
-    if (data.length > 8) {
-      setIsLoaded(true);
-    }
-  }, [data]);
 
   return (
     <>
