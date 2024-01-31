@@ -17,7 +17,7 @@ export const FotoReportaje = ({ handleClick, setData, data }) => {
 
   useEffect(() => {
     data.length > 4 && setIsLoaded(true);
-  }, [data]);
+  }, [data, handleClick]);
 
   return (
     <>
