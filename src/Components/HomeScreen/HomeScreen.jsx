@@ -48,6 +48,7 @@ export const HomeScreen = () => {
   }, [location]);
 
   const handleButtonClick = (buttonName) => {
+    setData([]);
     setShowImage(false);
     switch (buttonName) {
       case "fotorreportaje":

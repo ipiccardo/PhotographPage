@@ -29,6 +29,7 @@ export const Galery = () => {
   };
 
   const handleProyectChange = (e) => {
+    setData([]);
     setProyectName(e.target.name);
   };
 

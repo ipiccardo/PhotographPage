@@ -2,7 +2,7 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react";
 import Spinner from "../../Spinner/Spinner";
 import "../galery.css";
 
@@ -12,8 +12,11 @@ export const TrabajosPracticos = ({ handleClick, setData, data }) => {
   useLayoutEffect(() => {
     setData([]);
     setData(itemDataSix);
-    setIsLoaded(true);
   }, [setData]);
+
+  useEffect(() => {
+    data.length > 4 && setIsLoaded(true);
+  }, [data]);
 
   return (
     <>

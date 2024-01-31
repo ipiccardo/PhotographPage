@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 
@@ -12,8 +12,12 @@ export const FotoReportaje = ({ handleClick, setData, data }) => {
   useLayoutEffect(() => {
     setData([]);
     setData(itemDataFour);
-    setIsLoaded(true);
+    // setIsLoaded(true);
   }, [setData]);
+
+  useEffect(() => {
+    data.length > 4 && setIsLoaded(true);
+  }, [data]);
 
   return (
     <>

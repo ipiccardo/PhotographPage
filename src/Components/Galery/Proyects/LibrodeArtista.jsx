@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useEffect } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
@@ -12,8 +12,11 @@ export const LibroDeArtista = ({ handleClick, setData, data }) => {
   useLayoutEffect(() => {
     setData([]);
     setData(itemDataFive);
-    setIsLoaded(true);
   }, [setData]);
+
+  useEffect(() => {
+    data.length > 4 && setIsLoaded(true);
+  }, [data]);
 
   return (
     <>
