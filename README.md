@@ -49,17 +49,10 @@ Open your browser and navigate to `http://localhost:3000` to explore the portfol
 
 - Have suggestions or feedback? [Open an issue](https://github.com/your-username/photography-portfolio/issues) and let's make the portfolio even better.
 
-- Connect with me on [Instagram](https://www.instagram.com/your_username) to stay updated on my latest photography adventures.
-
 ## Credits:
 
 - Special thanks to the React.js community for providing the tools to create this immersive portfolio.
 
-- Contributors: [List of contributors](CONTRIBUTORS.md)
-
-## License:
-
-This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
 Embark on a visual journey through my lens, and let the power of React elevate the art of photography! 📷✨
 
