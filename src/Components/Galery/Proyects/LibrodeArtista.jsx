@@ -11,7 +11,7 @@ export const LibroDeArtista = ({ handleClick, setData, data }) => {
 
   useEffect(() => {
     setData([]);
-  }, [handleClick]);
+  }, [handleClick, setData]);
 
   useEffect(() => {
     setData(itemDataFive);
