@@ -17,7 +17,7 @@ const Futsal = ({ handleClick, setData, data }) => {
     setTimeout(() => {
       data.length && setIsLoaded(true);
     }, 500);
-  }, [setData, handleClick]);
+  }, [setData, handleClick, data]);
 
   return (
     <>

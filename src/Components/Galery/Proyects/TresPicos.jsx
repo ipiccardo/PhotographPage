@@ -17,7 +17,7 @@ const TresPicos = ({ handleClick, setData, data }) => {
     setTimeout(() => {
       setIsLoaded(true);
     }, 500);
-  }, [setData]);
+  }, [setData, handleClick]);
 
   return (
     <>
