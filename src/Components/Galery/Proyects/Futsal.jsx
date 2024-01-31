@@ -11,6 +11,10 @@ const Futsal = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setData([]);
+  }, [handleClick]);
+
+  useEffect(() => {
     setData(itemDataThree);
 
     // setIsLoaded(true);

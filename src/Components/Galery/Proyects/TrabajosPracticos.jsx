@@ -10,6 +10,10 @@ export const TrabajosPracticos = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setData([]);
+  }, [handleClick]);
+
+  useEffect(() => {
     setData(itemDataSix);
     // setTimeout(() => {
     //   setIsLoaded(true);

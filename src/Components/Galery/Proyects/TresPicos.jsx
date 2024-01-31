@@ -11,6 +11,10 @@ const TresPicos = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setData([]);
+  }, [handleClick]);
+
+  useEffect(() => {
     setData(itemData);
     // setTimeout(() => {
     //   setIsLoaded(true);

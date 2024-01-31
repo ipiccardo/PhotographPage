@@ -10,6 +10,10 @@ export const FotoReportaje = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setData([]);
+  }, [handleClick]);
+
+  useEffect(() => {
     setData(itemDataFour);
     // setIsLoaded(true);
     // setTimeout(() => {

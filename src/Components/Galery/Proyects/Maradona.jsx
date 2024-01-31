@@ -11,6 +11,10 @@ const Maradona = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setData([]);
+  }, [handleClick]);
+
+  useEffect(() => {
     setData(itemDataTwo);
     // setTimeout(() => {
     //   setIsLoaded(true);

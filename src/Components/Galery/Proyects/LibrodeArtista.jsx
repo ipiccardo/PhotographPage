@@ -10,6 +10,10 @@ export const LibroDeArtista = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setData([]);
+  }, [handleClick]);
+
+  useEffect(() => {
     setData(itemDataFive);
     // setTimeout(() => {
     //   setIsLoaded(true);
