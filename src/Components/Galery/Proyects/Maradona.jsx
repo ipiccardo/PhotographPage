@@ -7,21 +7,21 @@ import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
 import "../galery.css";
 
-const Maradona = ({ handleClick, setData }) => {
+const Maradona = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowFooter(true);
-  //   }, 3000);
-  // });
 
   useEffect(() => {
     setData(itemDataTwo);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 1500);
   }, [setData]);
+
+  useEffect(() => {
+    if (data.length >= 8) {
+      setIsLoaded(true);
+    }
+  }, [data]);
 
   return (
     <>

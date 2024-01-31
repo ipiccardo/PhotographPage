@@ -7,17 +7,23 @@ import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
 
-const Futsal = ({ handleClick, setData }) => {
+const Futsal = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setData(itemDataThree);
 
     // setIsLoaded(true);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 500);
   }, [setData]);
+
+  useEffect(() => {
+    if (data.length > 8) {
+      setIsLoaded(true);
+    }
+  }, [data]);
 
   return (
     <>

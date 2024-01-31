@@ -6,15 +6,21 @@ import { useEffect, useState } from "react";
 import Spinner from "../../Spinner/Spinner";
 import "../galery.css";
 
-export const TrabajosPracticos = ({ handleClick, setData }) => {
+export const TrabajosPracticos = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setData(itemDataSix);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 1500);
   }, [setData]);
+
+  useEffect(() => {
+    if (data.length > 8) {
+      setIsLoaded(true);
+    }
+  }, [data]);
 
   return (
     <>

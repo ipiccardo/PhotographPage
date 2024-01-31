@@ -7,15 +7,21 @@ import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
 
-const TresPicos = ({ handleClick, setData }) => {
+const TresPicos = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setData(itemData);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 1500);
   }, [setData]);
+
+  useEffect(() => {
+    if (data.length > 8) {
+      setIsLoaded(true);
+    }
+  }, [data]);
 
   return (
     <>

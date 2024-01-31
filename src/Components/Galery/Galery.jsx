@@ -16,6 +16,7 @@ export const Galery = () => {
   const [photoId, setPhotoId] = useState();
   const [proyectName, setProyectName] = useState("tres picos");
   const [data, setData] = useState([]);
+  const [selectedButton, setSelectedButton] = useState("tres picos");
 
   useEffect(() => {
     const filteredImg = data.find((item) => item.id === photoId);
@@ -55,6 +56,7 @@ export const Galery = () => {
             setPhotoSrc={setPhotoSrc}
             photoId={photoId}
             setData={setData}
+            data={data}
           />
         );
       case "Futsal":
@@ -66,6 +68,7 @@ export const Galery = () => {
             setPhotoSrc={setPhotoSrc}
             photoId={photoId}
             setData={setData}
+            data={data}
           />
         );
       default:

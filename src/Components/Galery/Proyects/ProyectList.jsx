@@ -1,32 +1,43 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const ProyectList = ({ handleProyectChange }) => {
+const ProyectList = ({ handleProyectChange, proyect }) => {
   return (
     <>
       <ul className="listContainer">
         <li>
           <Button
             onClick={handleProyectChange}
-            sx={{ backgroundColor: "black" }}
+            sx={{
+              backgroundColor: proyect === "tres picos" ? "contained" : "black",
+            }}
             variant="contained"
             name="tres picos"
           >
-           Trekking Tres Picos
+            Trekking Tres Picos
           </Button>
         </li>
         <li>
           <Button
             onClick={handleProyectChange}
-            sx={{ backgroundColor: "black" }}
+            sx={{
+              backgroundColor: proyect === "Maradona" ? "contained" : "black",
+            }}
             variant="contained"
             name="Maradona"
           >
-           Maradona D10S
+            Maradona D10S
           </Button>
         </li>
         <li>
-          <Button sx={{ backgroundColor: "black" }} variant="contained" name="Futsal" onClick={handleProyectChange}>
+          <Button
+            sx={{
+              backgroundColor: proyect === "Futsal" ? "contained" : "black",
+            }}
+            variant="contained"
+            name="Futsal"
+            onClick={handleProyectChange}
+          >
             Futsal Brown
           </Button>
         </li>

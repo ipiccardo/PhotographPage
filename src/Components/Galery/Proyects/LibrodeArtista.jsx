@@ -6,22 +6,21 @@ import { useEffect, useState } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 
-export const LibroDeArtista = ({ handleClick, setData }) => {
+export const LibroDeArtista = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setData(itemDataFive);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 1500);
   }, [setData]);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowFooter(true);
-  //   }, 3000);
-  // });
-
+  useEffect(() => {
+    if (data.length > 8) {
+      setIsLoaded(true);
+    }
+  }, [data]);
   return (
     <>
       <div className="galeryContainer">
