@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
@@ -6,6 +6,7 @@ import { useState } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
+import Progress from "../../Progress/Progress";
 
 const Futsal = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,11 +14,10 @@ const Futsal = ({ handleClick, setData, data }) => {
   useLayoutEffect(() => {
     setData([]);
     setData(itemDataThree);
-  }, [setData]);
-
-  useEffect(() => {
-    data.length > 4 && setIsLoaded(true);
-  }, [data, handleClick]);
+    setTimeout(() => {
+      data.length && setIsLoaded(true);
+    }, 500);
+  }, [setData, handleClick]);
 
   return (
     <>
@@ -33,6 +33,9 @@ const Futsal = ({ handleClick, setData, data }) => {
           </ImageListItem>
           {!isLoaded ? (
             <div className="spinnerContainer">
+              <p className="progressContainer">
+                <Progress />
+              </p>
               <Spinner />
             </div>
           ) : (

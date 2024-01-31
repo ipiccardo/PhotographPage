@@ -2,10 +2,11 @@ import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useState, useLayoutEffect, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
 import "../galery.css";
+import Progress from "../../Progress/Progress";
 
 const Maradona = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,11 +14,11 @@ const Maradona = ({ handleClick, setData, data }) => {
   useLayoutEffect(() => {
     setData([]);
     setData(itemDataTwo);
-  }, [setData]);
+    setTimeout(() => {
+      data.length && setIsLoaded(true);
+    }, 500);
+  }, [setData, handleClick]);
 
-  useEffect(() => {
-    data.length > 4 && setIsLoaded(true);
-  }, [data, handleClick]);
   return (
     <>
       <div className="galeryContainer">
@@ -32,6 +33,9 @@ const Maradona = ({ handleClick, setData, data }) => {
           </ImageListItem>
           {!isLoaded ? (
             <div className="spinnerContainer">
+              <p className="progressContainer">
+                <Progress />
+              </p>
               <Spinner />
             </div>
           ) : (

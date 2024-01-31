@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { useLayoutEffect, useEffect } from "react";
+import { useLayoutEffect } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
+import Progress from "../../Progress/Progress";
 
 export const FotoReportaje = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -12,12 +13,10 @@ export const FotoReportaje = ({ handleClick, setData, data }) => {
   useLayoutEffect(() => {
     setData([]);
     setData(itemDataFour);
-    // setIsLoaded(true);
-  }, [setData]);
-
-  useEffect(() => {
-    data.length > 4 && setIsLoaded(true);
-  }, [data, handleClick]);
+    setTimeout(() => {
+      data.length && setIsLoaded(true);
+    }, 500);
+  }, [setData, handleClick]);
 
   return (
     <>
@@ -40,6 +39,9 @@ export const FotoReportaje = ({ handleClick, setData, data }) => {
           </ImageListItem>
           {!isLoaded ? (
             <div className="spinnerContainer">
+              <p className="progressContainer">
+                <Progress />
+              </p>
               <Spinner />
             </div>
           ) : (
