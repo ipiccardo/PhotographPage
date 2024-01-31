@@ -160,6 +160,7 @@ export const Galery = () => { */
   grid-row-end: span 1;
   overflow: hidden;
   height: 100%;
+  padding-top: 0.5rem;
 }
 
 .progressContainer {

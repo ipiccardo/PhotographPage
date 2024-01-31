@@ -12,24 +12,24 @@
 
 // export default Spinner
 
-import * as React from 'react';
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
+import * as React from "react";
+import Skeleton from "@mui/material/Skeleton";
+import Stack from "@mui/material/Stack";
 
-export const Spinner =() => {
+export const Spinner = () => {
   return (
     <Stack spacing={1}>
       {/* For other variants, adjust the size with `width` and `height` */}
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
-      <Skeleton variant="rounded" width='200%' height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
+      <Skeleton variant="rounded" width="200%" height={90} />
     </Stack>
   );
-}
+};
 
-export default Spinner
+export default Spinner;

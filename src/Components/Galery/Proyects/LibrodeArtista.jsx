@@ -5,18 +5,19 @@ import ListSubheader from "@mui/material/ListSubheader";
 import { useState } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
-import Progress from "../../Progress/Progress";
 
 export const LibroDeArtista = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useLayoutEffect(() => {
-    setData([]);
     setData(itemDataFive);
-    setTimeout(() => {
-      data.length && setIsLoaded(true);
-    }, 500);
+    data.length && setIsLoaded(true);
+    // setTimeout(() => {
+    //   data.length && setIsLoaded(true);
+    // }, 300);
   }, [setData, handleClick, data]);
+
+  const orderedData = [...itemDataFive].sort((a, b) => a.order - b.order);
 
   return (
     <>
@@ -32,13 +33,10 @@ export const LibroDeArtista = ({ handleClick, setData, data }) => {
           </ImageListItem>
           {!isLoaded ? (
             <div className="spinnerContainer">
-              <p className="progressContainer">
-                <Progress />
-              </p>
               <Spinner />
             </div>
           ) : (
-            itemDataFive.map((item) => (
+            orderedData.map((item) => (
               <ImageListItem key={item.id}>
                 <img
                   id={item.id}

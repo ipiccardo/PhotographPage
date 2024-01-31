@@ -6,18 +6,19 @@ import { useState, useLayoutEffect } from "react";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
 import "../galery.css";
-import Progress from "../../Progress/Progress";
 
 const Maradona = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useLayoutEffect(() => {
-    setData([]);
     setData(itemDataTwo);
-    setTimeout(() => {
-      data.length && setIsLoaded(true);
-    }, 500);
+    data.length && setIsLoaded(true);
+    // setTimeout(() => {
+    //   data.length && setIsLoaded(true);
+    // }, 300);
   }, [setData, handleClick, data]);
+
+  const orderedData = [...itemDataTwo].sort((a, b) => a.order - b.order);
 
   return (
     <>
@@ -33,13 +34,10 @@ const Maradona = ({ handleClick, setData, data }) => {
           </ImageListItem>
           {!isLoaded ? (
             <div className="spinnerContainer">
-              <p className="progressContainer">
-                <Progress />
-              </p>
               <Spinner />
             </div>
           ) : (
-            itemDataTwo.map((item) => (
+            orderedData.map((item) => (
               <ImageListItem key={item.id}>
                 <img
                   id={item.id}

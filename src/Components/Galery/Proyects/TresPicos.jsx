@@ -6,18 +6,19 @@ import { useState, useLayoutEffect } from "react";
 import "../galery.css";
 import Spinner from "../../Spinner/Spinner";
 import Footer from "../../Footer/Footer";
-import Progress from "../../Progress/Progress";
 
 const TresPicos = ({ handleClick, setData, data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useLayoutEffect(() => {
-    setData([]);
     setData(itemData);
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 500);
+    setIsLoaded(true);
+    // setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 300);
   }, [setData, handleClick]);
+
+  const orderedData = [...itemData].sort((a, b) => a.order - b.order);
 
   return (
     <>
@@ -33,13 +34,10 @@ const TresPicos = ({ handleClick, setData, data }) => {
           </ImageListItem>
           {!isLoaded ? (
             <div className="spinnerContainer">
-              <p className="progressContainer">
-                <Progress />
-              </p>
               <Spinner />
             </div>
           ) : (
-            itemData.map((item) => (
+            orderedData.map((item) => (
               <ImageListItem key={item.id}>
                 <img
                   id={item.id}
